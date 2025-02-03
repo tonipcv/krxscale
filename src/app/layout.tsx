@@ -20,9 +20,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Korax Labs | Transformando Influência em Equity',
-  description: 'Desenvolvemos softwares white label que transformam sua audiência em ativos digitais de alto valor e fluxos de receita recorrente.',
-  keywords: ['white label', 'software', 'influenciadores', 'equity', 'desenvolvimento', 'monetização', 'audiência'],
+  title: 'Korax Labs | Transforming Influence into Equity',
+  description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
+  keywords: ['white label', 'software', 'influencers', 'equity', 'development', 'monetization', 'audience'],
   authors: [{ name: 'Korax Labs' }],
   creator: 'Korax Labs',
   publisher: 'Korax Labs',
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'pt_BR',
+    locale: 'en_US',
     url: 'https://koraxlabs.com',
-    title: 'Korax Labs | Transformando Influência em Equity',
-    description: 'Desenvolvemos softwares white label que transformam sua audiência em ativos digitais de alto valor e fluxos de receita recorrente.',
+    title: 'Korax Labs | Transforming Influence into Equity',
+    description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
     siteName: 'Korax Labs',
     images: [{
       url: '/og-image.jpg',
@@ -64,8 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Korax Labs | Transformando Influência em Equity',
-    description: 'Desenvolvemos softwares white label que transformam sua audiência em ativos digitais de alto valor e fluxos de receita recorrente.',
+    title: 'Korax Labs | Transforming Influence into Equity',
+    description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
     images: ['/twitter-image.jpg'],
     creator: '@koraxlabs',
   },

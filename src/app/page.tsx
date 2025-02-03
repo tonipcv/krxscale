@@ -56,10 +56,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-white rounded-sm flex items-center justify-center relative overflow-hidden">
-                <span className="text-2xl font-light text-black group-hover:scale-110 transition-transform duration-300">K</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              <Image
+                src="/logo.svg"
+                alt="Korax Labs"
+                width={40}
+                height={40}
+                className="group-hover:scale-110 transition-transform duration-300"
+                priority
+              />
               <span className="text-xl font-light tracking-wider">KORAX</span>
             </div>
 
@@ -92,17 +96,17 @@ export default function Home() {
           <div className="text-center space-y-8 relative">
             <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent blur-3xl -z-10" />
             <h1 className="text-5xl sm:text-7xl font-extralight tracking-tight">
-              Transformando<br />
+              Transforming<br />
               <span className="text-zinc-400 relative inline-block group">
-                Influência
+                Influence
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-700" />
-              </span> em <span className="text-zinc-400 relative inline-block group">
+              </span> into <span className="text-zinc-400 relative inline-block group">
                 Equity
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-700" />
               </span>
             </h1>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto font-light leading-relaxed">
-              Desenvolvemos softwares white label que transformam sua audiência em ativos digitais de alto valor e fluxos de receita recorrente.
+              We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.
             </p>
           </div>
 
@@ -111,18 +115,18 @@ export default function Home() {
             {[
               {
                 icon: Target,
-                title: "Definimos",
-                description: "Identificamos o alvo perfeito para seu produto digital"
+                title: "Define",
+                description: "We identify the perfect target for your digital product"
               },
               {
                 icon: Code,
-                title: "Desenvolvemos",
-                description: "Criamos soluções tecnológicas sob medida"
+                title: "Develop",
+                description: "We create tailored technological solutions"
               },
               {
                 icon: Rocket,
-                title: "Aceleramos",
-                description: "Impulsionamos o crescimento do seu negócio"
+                title: "Accelerate",
+                description: "We boost your business growth"
               }
             ].map((item, index) => (
               <div 
@@ -145,15 +149,15 @@ export default function Home() {
           {/* CTA Section */}
           <div className="text-center space-y-8 py-20 border-y border-zinc-900 relative">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent blur-3xl -z-10" />
-            <h2 className="text-3xl font-light tracking-wide">Pronto para escalar sua marca?</h2>
+            <h2 className="text-3xl font-light tracking-wide">Ready to scale your brand?</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto font-light leading-relaxed">
-              Se você tem uma audiência e quer monetizá-la com um software inovador, nós podemos construir isso para você.
+              If you have an audience and want to monetize it with innovative software, we can build that for you.
             </p>
             <button
               onClick={() => setShowForm(true)}
               className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm font-light overflow-hidden bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300"
             >
-              <span className="relative z-10 text-white/90 group-hover:text-white">COMECE AGORA!</span>
+              <span className="relative z-10 text-white/90 group-hover:text-white">START NOW!</span>
               <ArrowRight size={16} strokeWidth={1} className="relative z-10 text-white/90 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-blue-500/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
             </button>
@@ -163,7 +167,7 @@ export default function Home() {
         {showForm && <ContactForm onClose={() => setShowForm(false)} />}
 
         <footer className="py-8 text-center text-zinc-500 font-light text-sm tracking-wide">
-          <p>© {new Date().getFullYear()} KORAX LABS. TODOS OS DIREITOS RESERVADOS.</p>
+          <p>© {new Date().getFullYear()} KORAX LABS. ALL RIGHTS RESERVED.</p>
         </footer>
       </div>
 

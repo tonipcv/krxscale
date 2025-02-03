@@ -56,8 +56,8 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         </button>
         
         <div className="space-y-3 mb-8">
-          <h2 className="text-2xl sm:text-3xl font-light tracking-wide">Vamos Conversar</h2>
-          <p className="text-zinc-400 font-light text-sm sm:text-base">Conte-nos um pouco sobre você e seu projeto</p>
+          <h2 className="text-2xl sm:text-3xl font-light tracking-wide">Let&apos;s Talk</h2>
+          <p className="text-zinc-400 font-light text-sm sm:text-base">Tell us a bit about you and your project</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -65,7 +65,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             <div className="space-y-2 group">
               <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
                 <User size={16} className="text-zinc-500 group-hover:text-white/80 transition-colors" />
-                Nome
+                Name
               </label>
               <input
                 type="text"
@@ -101,41 +101,40 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             />
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="space-y-2 group">
-              <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
-                <Users size={16} className="text-zinc-500 group-hover:text-white/80 transition-colors" />
-                Tamanho da Audiência
-              </label>
-              <select
-                name="audienceSize"
-                required
-                className="w-full bg-black/30 border border-zinc-800 p-3 sm:p-4 rounded-sm text-white focus:outline-none focus:border-zinc-700 focus:ring-1 focus:ring-zinc-700 transition-all appearance-none"
-              >
-                <option value="">Selecione</option>
-                <option value="0-10k">0 - 10k seguidores</option>
-                <option value="10k-50k">10k - 50k seguidores</option>
-                <option value="50k-100k">50k - 100k seguidores</option>
-                <option value="100k+">Mais de 100k seguidores</option>
-              </select>
-            </div>
-            <div className="space-y-2 group">
-              <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
-                <DollarSign size={16} className="text-zinc-500 group-hover:text-white/80 transition-colors" />
-                Faturamento Mensal
-              </label>
-              <select
-                name="currentRevenue"
-                required
-                className="w-full bg-black/30 border border-zinc-800 p-3 sm:p-4 rounded-sm text-white focus:outline-none focus:border-zinc-700 focus:ring-1 focus:ring-zinc-700 transition-all appearance-none"
-              >
-                <option value="">Selecione</option>
-                <option value="0-10k">R$ 0 - R$ 10k/mês</option>
-                <option value="10k-50k">R$ 10k - R$ 50k/mês</option>
-                <option value="50k-100k">R$ 50k - R$ 100k/mês</option>
-                <option value="100k+">Mais de R$ 100k/mês</option>
-              </select>
-            </div>
+          <div className="space-y-2 group">
+            <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
+              <Users size={16} className="text-zinc-500 group-hover:text-white/80 transition-colors" />
+              Audience Size
+            </label>
+            <select
+              name="audienceSize"
+              required
+              className="w-full bg-black/30 border border-zinc-800 p-3 sm:p-4 rounded-sm text-white focus:outline-none focus:border-zinc-700 focus:ring-1 focus:ring-zinc-700 transition-all appearance-none"
+            >
+              <option value="">Select</option>
+              <option value="0-10k">0 - 10k followers</option>
+              <option value="10k-50k">10k - 50k followers</option>
+              <option value="50k-100k">50k - 100k followers</option>
+              <option value="100k+">More than 100k followers</option>
+            </select>
+          </div>
+
+          <div className="space-y-2 group">
+            <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
+              <DollarSign size={16} className="text-zinc-500 group-hover:text-white/80 transition-colors" />
+              Monthly Revenue
+            </label>
+            <select
+              name="currentRevenue"
+              required
+              className="w-full bg-black/30 border border-zinc-800 p-3 sm:p-4 rounded-sm text-white focus:outline-none focus:border-zinc-700 focus:ring-1 focus:ring-zinc-700 transition-all appearance-none"
+            >
+              <option value="">Select</option>
+              <option value="0-10k">$0 - $10k/month</option>
+              <option value="10k-50k">$10k - $50k/month</option>
+              <option value="50k-100k">$50k - $100k/month</option>
+              <option value="100k+">More than $100k/month</option>
+            </select>
           </div>
 
           <button
@@ -144,7 +143,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             className="w-full py-4 mt-4 bg-gradient-to-r from-purple-500/80 to-blue-500/80 hover:from-purple-500 hover:to-blue-500 text-white font-light tracking-wider transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed rounded-sm group relative overflow-hidden"
           >
             <span className="relative z-10 inline-flex items-center gap-2">
-              {isSubmitting ? 'ENVIANDO...' : 'CONTINUAR'}
+              {isSubmitting ? 'SENDING...' : 'CONTINUE'}
               <Send size={16} className="group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-white/10 to-blue-500/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
