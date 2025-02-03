@@ -73,7 +73,7 @@ export default function Home() {
                 onClick={() => setShowForm(true)}
                 className="group relative px-6 py-2 text-sm font-light overflow-hidden bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300"
               >
-                <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">COMECE AGORA!</span>
+                <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">APPLY NOW!</span>
                 <Sparkles className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-white/0 group-hover:text-white/50 transition-all duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-blue-500/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
               </button>
@@ -84,7 +84,7 @@ export default function Home() {
               onClick={() => setShowForm(true)}
               className="sm:hidden px-4 py-2 text-sm font-light bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 rounded-sm"
             >
-              <span className="text-white/90">COMECE AGORA!</span>
+              <span className="text-white/90">APPLY NOW!</span>
             </button>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function Home() {
               onClick={() => setShowForm(true)}
               className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm font-light overflow-hidden bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300"
             >
-              <span className="relative z-10 text-white/90 group-hover:text-white">START NOW!</span>
+              <span className="relative z-10 text-white/90 group-hover:text-white">APPLY NOW!</span>
               <ArrowRight size={16} strokeWidth={1} className="relative z-10 text-white/90 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-blue-500/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
             </button>
