@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://koraxlabs.com/sitemap.xml 
