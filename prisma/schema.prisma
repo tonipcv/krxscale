@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgres://postgres:8159b010648307fa447c@dpbdp1.easypanel.host:321/korax?sslmode=disable"
+  url      = env("DATABASE_URL")
 }
 
 model Lead {
