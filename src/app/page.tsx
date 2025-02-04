@@ -69,13 +69,13 @@ export default function Home() {
             </div>
 
             {/* Right Side Navigation */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               {/* Login Link */}
               <a
                 href="https://app.koraxlabs.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-light text-zinc-400 hover:text-white transition-colors hidden sm:block"
+                className="text-sm font-light text-zinc-400 hover:text-white transition-colors"
               >
                 LOGIN
               </a>
@@ -95,9 +95,9 @@ export default function Home() {
               {/* Mobile CTA */}
               <button 
                 onClick={() => setShowForm(true)}
-                className="sm:hidden px-4 py-2 text-sm font-light bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 rounded-sm"
+                className="sm:hidden px-3 py-1.5 text-sm font-light bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 rounded-sm"
               >
-                <span className="text-white/90">APPLY NOW!</span>
+                <span className="text-white/90">APPLY</span>
               </button>
             </div>
           </div>
