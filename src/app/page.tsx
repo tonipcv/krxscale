@@ -55,6 +55,7 @@ export default function Home() {
       <nav className="fixed w-full top-0 border-b border-zinc-900 backdrop-blur-md z-40 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
+            {/* Logo */}
             <div className="flex items-center gap-3 group">
               <Image
                 src="/logo.svg"
@@ -67,25 +68,38 @@ export default function Home() {
               <span className="text-xl font-light tracking-wider">KORAX</span>
             </div>
 
-            {/* Desktop CTA */}
-            <div className="hidden sm:block">
-              <button
-                onClick={() => setShowForm(true)}
-                className="group relative px-6 py-2 text-sm font-light overflow-hidden bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300"
+            {/* Right Side Navigation */}
+            <div className="flex items-center gap-6">
+              {/* Login Link */}
+              <a
+                href="https://app.koraxlabs.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-light text-zinc-400 hover:text-white transition-colors hidden sm:block"
               >
-                <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">APPLY NOW!</span>
-                <Sparkles className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-white/0 group-hover:text-white/50 transition-all duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-blue-500/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                LOGIN
+              </a>
+
+              {/* Desktop CTA */}
+              <div className="hidden sm:block">
+                <button
+                  onClick={() => setShowForm(true)}
+                  className="group relative px-6 py-2 text-sm font-light overflow-hidden bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300"
+                >
+                  <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">APPLY NOW!</span>
+                  <Sparkles className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-white/0 group-hover:text-white/50 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-blue-500/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                </button>
+              </div>
+
+              {/* Mobile CTA */}
+              <button 
+                onClick={() => setShowForm(true)}
+                className="sm:hidden px-4 py-2 text-sm font-light bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 rounded-sm"
+              >
+                <span className="text-white/90">APPLY NOW!</span>
               </button>
             </div>
-
-            {/* Mobile CTA */}
-            <button 
-              onClick={() => setShowForm(true)}
-              className="sm:hidden px-4 py-2 text-sm font-light bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 rounded-sm"
-            >
-              <span className="text-white/90">APPLY NOW!</span>
-            </button>
           </div>
         </div>
       </nav>
