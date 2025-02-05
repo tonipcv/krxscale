@@ -87,9 +87,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://koraxlabs.com',
-  },
-  languages: {
-    'en-US': 'https://koraxlabs.com',
+    languages: {
+      'en-US': 'https://koraxlabs.com'
+    }
   },
 };
 
