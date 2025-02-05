@@ -85,6 +85,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://koraxlabs.com',
+  },
+  languages: {
+    'en-US': 'https://koraxlabs.com',
+  },
 };
 
 export default function RootLayout({
@@ -93,12 +99,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-US">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="alternate" hrefLang="en-US" href="https://koraxlabs.com" />
+        <meta httpEquiv="content-language" content="en-US" />
       </head>
       <body className={montserrat.className}>
         {children}
