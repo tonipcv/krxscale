@@ -133,36 +133,19 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Dashboard and Mobile Preview */}
+          {/* Dashboard Preview */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
-            <div className="grid lg:grid-cols-5 gap-8 items-center">
-              {/* Dashboard */}
-              <div className="lg:col-span-3 relative aspect-[16/9] rounded-lg border border-zinc-800 overflow-hidden">
-                <Image
-                  src="/dashboard.webp"
-                  alt="Korax Dashboard"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-
-              {/* Mobile */}
-              <div className="lg:col-span-2 relative hidden lg:block">
-                <div className="relative w-[280px] aspect-[9/19] rounded-2xl border border-zinc-800 overflow-hidden">
-                  <Image
-                    src="/mobile.webp"
-                    alt="Korax Mobile App"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                </div>
-              </div>
+            <div className="relative aspect-[16/9] rounded-lg border border-zinc-800 overflow-hidden">
+              <Image
+                src="/dashboard.webp"
+                alt="Korax Dashboard"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
           </div>
 
