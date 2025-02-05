@@ -137,15 +137,34 @@ export default function Home() {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
-            <div className="relative aspect-[16/9] rounded-lg border border-zinc-800 overflow-hidden">
+            <div 
+              className="relative aspect-[16/9] rounded-lg border border-zinc-800 overflow-hidden"
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect()
+                const x = e.clientX - rect.left
+                const y = e.clientY - rect.top
+                
+                const spotlight = e.currentTarget.querySelector('.spotlight') as HTMLElement
+                if (spotlight) {
+                  spotlight.style.background = `radial-gradient(circle 150px at ${x}px ${y}px, rgba(139, 92, 246, 0.15), transparent)`
+                }
+              }}
+              onMouseLeave={(e) => {
+                const spotlight = e.currentTarget.querySelector('.spotlight') as HTMLElement
+                if (spotlight) {
+                  spotlight.style.background = 'transparent'
+                }
+              }}
+            >
               <Image
                 src="/dashboard.webp"
                 alt="Korax Dashboard"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              <div className="spotlight absolute inset-0 transition-all duration-300" />
             </div>
           </div>
 
