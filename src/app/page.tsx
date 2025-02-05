@@ -79,6 +79,14 @@ export default function Home() {
                 BLOG
               </Link>
 
+              {/* Careers Link */}
+              <Link
+                href="/careers"
+                className="text-sm font-light text-zinc-400 hover:text-white transition-colors hidden sm:block"
+              >
+                CAREERS
+              </Link>
+
               {/* Login Link */}
               <a
                 href="https://app.koraxlabs.com"
