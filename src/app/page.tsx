@@ -82,9 +82,10 @@ export default function Home() {
               {/* Careers Link */}
               <Link
                 href="/careers"
-                className="text-sm font-light text-zinc-400 hover:text-white transition-colors hidden sm:block"
+                className="text-sm font-light text-zinc-400 hover:text-white transition-colors"
               >
-                CAREERS
+                <span className="hidden sm:inline">CAREERS</span>
+                <span className="sm:hidden text-xs">JOBS</span>
               </Link>
 
               {/* Login Link */}
@@ -94,7 +95,8 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-sm font-light text-zinc-400 hover:text-white transition-colors"
               >
-                LOGIN
+                <span className="hidden sm:inline">LOGIN</span>
+                <span className="sm:hidden text-xs">LOGIN</span>
               </a>
 
               {/* Desktop CTA */}
@@ -232,8 +234,21 @@ export default function Home() {
 
         {showForm && <ContactForm onClose={() => setShowForm(false)} />}
 
-        <footer className="py-8 text-center text-zinc-500 font-light text-sm tracking-wide">
-          <p>© {new Date().getFullYear()} KORAX LABS. ALL RIGHTS RESERVED.</p>
+        <footer className="py-8 text-center space-y-4">
+          {/* Mobile Links - Visible only on mobile */}
+          <div className="flex justify-center gap-4 sm:hidden">
+            <Link
+              href="/careers"
+              className="text-sm font-light text-zinc-500 hover:text-white transition-colors"
+            >
+              CAREERS
+            </Link>
+          </div>
+          
+          {/* Copyright */}
+          <p className="text-zinc-500 font-light text-sm tracking-wide">
+            © {new Date().getFullYear()} KORAX LABS. ALL RIGHTS RESERVED.
+          </p>
         </footer>
       </div>
 
