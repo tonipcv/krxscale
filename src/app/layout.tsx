@@ -11,7 +11,18 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Korax Labs | Transforming Influence into Equity',
   description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
-  keywords: ['white label', 'software', 'influencers', 'equity', 'development', 'monetization', 'audience'],
+  keywords: [
+    'white label software',
+    'audience monetization',
+    'digital assets',
+    'creator economy',
+    'influencer platform',
+    'revenue streams',
+    'audience engagement',
+    'digital transformation',
+    'software development',
+    'tech solutions'
+  ],
   authors: [{ name: 'Korax Labs' }],
   creator: 'Korax Labs',
   publisher: 'Korax Labs',
@@ -48,7 +59,7 @@ export const metadata: Metadata = {
       url: '/og-image.jpg',
       width: 1200,
       height: 630,
-      alt: 'Korax Labs',
+      alt: 'Korax Labs - White Label Software Solutions',
     }],
   },
   twitter: {

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import Image from "next/image";
 import { Target, Code, Rocket, Trophy, ArrowRight, MousePointer2, Sparkles } from "lucide-react";
 import ContactForm from './components/ContactForm'
+import Link from 'next/link'
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false)
@@ -70,6 +71,14 @@ export default function Home() {
 
             {/* Right Side Navigation */}
             <div className="flex items-center gap-4 sm:gap-6">
+              {/* Blog Link */}
+              <Link
+                href="/blog"
+                className="text-sm font-light text-zinc-400 hover:text-white transition-colors hidden sm:block"
+              >
+                BLOG
+              </Link>
+
               {/* Login Link */}
               <a
                 href="https://app.koraxlabs.com"
@@ -122,6 +131,39 @@ export default function Home() {
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto font-light leading-relaxed">
               We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.
             </p>
+          </div>
+
+          {/* Dashboard and Mobile Preview */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            
+            <div className="grid lg:grid-cols-5 gap-8 items-center">
+              {/* Dashboard */}
+              <div className="lg:col-span-3 relative aspect-[16/9] rounded-lg border border-zinc-800 overflow-hidden">
+                <Image
+                  src="/dashboard.webp"
+                  alt="Korax Dashboard"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+
+              {/* Mobile */}
+              <div className="lg:col-span-2 relative hidden lg:block">
+                <div className="relative w-[280px] aspect-[9/19] rounded-2xl border border-zinc-800 overflow-hidden">
+                  <Image
+                    src="/mobile.webp"
+                    alt="Korax Mobile App"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Abordagem Section */}
