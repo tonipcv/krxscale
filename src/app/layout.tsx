@@ -40,13 +40,9 @@ export const metadata: Metadata = {
     apple: [
       { url: '/apple-touch-icon.png' },
     ],
-    other: [
-      {
-        rel: 'mask-icon',
-        url: '/safari-pinned-tab.svg',
-        color: '#000000'
-      }
-    ]
+    shortcut: [
+      { url: '/favicon.ico' }
+    ],
   },
   openGraph: {
     type: 'website',
@@ -56,9 +52,9 @@ export const metadata: Metadata = {
     description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
     siteName: 'Korax Labs',
     images: [{
-      url: '/og-image.jpg',
-      width: 1200,
-      height: 630,
+      url: '/android-chrome-512x512.png',
+      width: 512,
+      height: 512,
       alt: 'Korax Labs - White Label Software Solutions',
     }],
   },
@@ -66,7 +62,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Korax Labs | Transforming Influence into Equity',
     description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
-    images: ['/twitter-image.jpg'],
+    images: ['/android-chrome-512x512.png'],
     creator: '@koraxlabs',
   },
   viewport: {
