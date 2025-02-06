@@ -33,8 +33,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',
@@ -90,13 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en-US">
       <head>
-        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="msapplication-config" content="none" />
       </head>
       <body className={montserrat.className}>
         {children}
