@@ -32,7 +32,12 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico' },
+      { url: '/icon-dark.svg', type: 'image/svg+xml', media: '(prefers-color-scheme: dark)' },
+      { url: '/icon-light.svg', type: 'image/svg+xml', media: '(prefers-color-scheme: light)' }
+    ]
   },
   openGraph: {
     type: 'website',
@@ -88,7 +93,10 @@ export default function RootLayout({
   return (
     <html lang="en-US">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+        <link rel="icon" type="image/svg+xml" href="/icon-dark.svg" media="(prefers-color-scheme: dark)" />
+        <link rel="icon" type="image/svg+xml" href="/icon-light.svg" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </head>
       <body className={montserrat.className}>
         {children}
