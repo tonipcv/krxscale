@@ -51,17 +51,18 @@ export const metadata: Metadata = {
     description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
     siteName: 'Korax Labs',
     images: [{
-      url: '/android-chrome-512x512.png',
+      url: 'https://koraxlabs.com/android-chrome-512x512.png',
       width: 512,
       height: 512,
-      alt: 'Korax Labs - White Label Software Solutions',
+      alt: 'Korax Labs Logo',
+      type: 'image/png',
     }],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Korax Labs | Transforming Influence into Equity',
     description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
-    images: ['/android-chrome-512x512.png'],
+    images: ['https://koraxlabs.com/android-chrome-512x512.png'],
     creator: '@koraxlabs',
   },
   viewport: {
