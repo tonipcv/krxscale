@@ -10,8 +10,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Korax Labs | Transforming Influence into Equity',
-  description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
+  title: 'Korax Labs',
+  description: 'Transform your influence into equity',
   keywords: [
     'white label software',
     'audience monetization',
@@ -34,33 +34,30 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico' },
-      { url: '/icon-dark.svg', type: 'image/svg+xml', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon-light.svg', type: 'image/svg+xml', media: '(prefers-color-scheme: light)' }
+      {
+        url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2393C5FD;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%2367E8F9;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23A5B4FC;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 5 L65 45 L85 45 L40 95 L45 60 L25 60 Z' fill='url(%23grad)' /%3E%3C/svg%3E",
+        sizes: 'any',
+        type: 'image/svg+xml'
+      }
+    ],
+    shortcut: [
+      {
+        url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2393C5FD;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%2367E8F9;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23A5B4FC;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 5 L65 45 L85 45 L40 95 L45 60 L25 60 Z' fill='url(%23grad)' /%3E%3C/svg%3E",
+        type: 'image/svg+xml'
+      }
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 5 L65 45 L85 45 L40 95 L45 60 L25 60 Z' fill='%23000000' /%3E%3C/svg%3E",
+      }
     ]
   },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://koraxlabs.com',
-    title: 'Korax Labs | Transforming Influence into Equity',
-    description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
-    siteName: 'Korax Labs',
-    images: [{
-      url: 'https://koraxlabs.com/android-chrome-512x512.png',
-      width: 512,
-      height: 512,
-      alt: 'Korax Labs Logo',
-      type: 'image/png',
-    }],
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Korax Labs | Transforming Influence into Equity',
-    description: 'We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.',
-    images: ['https://koraxlabs.com/android-chrome-512x512.png'],
-    creator: '@koraxlabs',
+  manifest: '/site.webmanifest',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Korax Labs',
   },
   viewport: {
     width: 'device-width',
@@ -84,6 +81,28 @@ export const metadata: Metadata = {
       'en-US': 'https://koraxlabs.com'
     }
   },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://koraxlabs.com',
+    siteName: 'Korax Labs',
+    title: 'Korax Labs',
+    description: 'Transform your influence into equity',
+    images: [
+      {
+        url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2393C5FD;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%2367E8F9;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23A5B4FC;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 5 L65 45 L85 45 L40 95 L45 60 L25 60 Z' fill='url(%23grad)' /%3E%3C/svg%3E",
+        width: 100,
+        height: 100,
+        alt: 'Korax Labs Logo'
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Korax Labs',
+    description: 'Transform your influence into equity',
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default function RootLayout({
@@ -94,10 +113,17 @@ export default function RootLayout({
   return (
     <html lang="en-US">
       <head>
-        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-        <link rel="icon" type="image/svg+xml" href="/icon-dark.svg" media="(prefers-color-scheme: dark)" />
-        <link rel="icon" type="image/svg+xml" href="/icon-light.svg" media="(prefers-color-scheme: light)" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link 
+          rel="icon" 
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+          type="image/svg+xml"
+        />
+        {/* Favicon com gradiente e raio */}
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2393C5FD;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%2367E8F9;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23A5B4FC;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 5 L65 45 L85 45 L40 95 L45 60 L25 60 Z' fill='url(%23grad)' /%3E%3C/svg%3E"
+        />
       </head>
       <body className={`${spaceGrotesk.className} antialiased`}>
         {children}

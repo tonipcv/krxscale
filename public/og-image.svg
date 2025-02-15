@@ -1,17 +1,10 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="black"/>
-  <g transform="translate(344,59)">
-    <rect width="512" height="512" rx="32" fill="black"/>
-    <path d="M128 128L256 256M256 256L384 128M256 256L128 384M256 256L384 384" 
-      stroke="white" 
-      stroke-width="32" 
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path d="M256 128L256 384" 
-      stroke="white" 
-      stroke-width="32" 
-      stroke-linecap="round"
-    />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#93C5FD;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#67E8F9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A5B4FC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <path d="M50 5 L65 45 L85 45 L40 95 L45 60 L25 60 Z" fill="url(#grad)" />
 </svg> 
