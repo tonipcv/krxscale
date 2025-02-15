@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
-import { Montserrat } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import "./globals.css";
 
-const montserrat = Montserrat({ 
+const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600'],
+  weight: ['300', '400', '500'],
+  variable: '--font-space',
 });
 
 export const metadata: Metadata = {
@@ -98,7 +99,7 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/icon-light.svg" media="(prefers-color-scheme: light)" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-      <body className={montserrat.className}>
+      <body className={`${spaceGrotesk.className} antialiased`}>
         {children}
       </body>
     </html>

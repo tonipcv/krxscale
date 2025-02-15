@@ -35,89 +35,61 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Cursor follower */}
-      <div 
-        className="fixed w-[500px] h-[500px] rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl pointer-events-none transition-transform duration-1000"
-        style={{
-          transform: `translate(${mousePosition.x - 250}px, ${mousePosition.y - 250}px)`,
-        }}
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-blue-950 to-zinc-900 text-white overflow-hidden">
       {/* Progress bar */}
       <div className="fixed top-0 left-0 w-full h-0.5 bg-zinc-800 z-50">
         <div 
-          className="h-full bg-white transition-all duration-300"
+          className="h-full bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 transition-all duration-300"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
 
-      {/* Navbar */}
-      <nav className="fixed w-full top-0 border-b border-zinc-900 backdrop-blur-md z-40 transition-all duration-300">
+      {/* SVG Gradients - Movido para o topo para garantir que seja carregado primeiro */}
+      <svg width="0" height="0" className="fixed">
+        <defs>
+          <linearGradient id="korax-gradient" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#60A5FA" />
+            <stop offset="50%" stopColor="#67E8F9" />
+            <stop offset="100%" stopColor="#818CF8" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      {/* Navbar - Removido o botão Apply Now */}
+      <nav className="fixed w-full top-0 border-b border-zinc-800/50 backdrop-blur-md z-40 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-3 group">
-              <Image
-                src="/logo.svg"
-                alt="Korax Labs"
-                width={40}
-                height={40}
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 512 512"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
                 className="group-hover:scale-110 transition-transform duration-300"
-                priority
-              />
-              <span className="text-xl font-light tracking-wider">KORAX</span>
+              >
+                <g stroke="url(#korax-gradient)" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="128" y1="128" x2="256" y2="256" />
+                  <line x1="256" y1="256" x2="384" y2="128" />
+                  <line x1="256" y1="256" x2="128" y2="384" />
+                  <line x1="256" y1="256" x2="384" y2="384" />
+                  <line x1="256" y1="128" x2="256" y2="384" />
+                </g>
+              </svg>
+              <span className="text-xl tracking-wider">KORAX</span>
             </div>
 
-            {/* Right Side Navigation */}
+            {/* Right Side Navigation - Sem o botão Apply */}
             <div className="flex items-center gap-4 sm:gap-6">
-              {/* Blog Link */}
-              <Link
-                href="/blog"
-                className="text-sm font-light text-zinc-400 hover:text-white transition-colors hidden sm:block"
-              >
-                BLOG
-              </Link>
 
-              {/* Careers Link */}
               <Link
                 href="/careers"
-                className="text-sm font-light text-zinc-400 hover:text-white transition-colors"
+                className="text-sm tracking-wide text-zinc-400 hover:text-white transition-colors"
               >
                 <span className="hidden sm:inline">CAREERS</span>
                 <span className="sm:hidden text-xs">JOBS</span>
               </Link>
-
-              {/* Login Link */}
-              <a
-                href="https://app.koraxlabs.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-light text-zinc-400 hover:text-white transition-colors"
-              >
-                <span className="hidden sm:inline">LOGIN</span>
-                <span className="sm:hidden text-xs">LOGIN</span>
-              </a>
-
-              {/* Desktop CTA */}
-              <div className="hidden sm:block">
-                <button
-                  onClick={() => setShowForm(true)}
-                  className="group relative px-6 py-2 text-sm font-light overflow-hidden bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300"
-                >
-                  <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">APPLY NOW!</span>
-                  <Sparkles className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-white/0 group-hover:text-white/50 transition-all duration-300" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-blue-500/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                </button>
-              </div>
-
-              {/* Mobile CTA */}
-              <button 
-                onClick={() => setShowForm(true)}
-                className="sm:hidden px-3 py-1.5 text-sm font-light bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 rounded-sm"
-              >
-                <span className="text-white/90">APPLY</span>
-              </button>
             </div>
           </div>
         </div>
@@ -127,54 +99,30 @@ export default function Home() {
         <main className="space-y-32 py-32 mt-16">
           {/* Hero Section */}
           <div className="text-center space-y-8 relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent blur-3xl -z-10" />
-            <h1 className="text-5xl sm:text-7xl font-extralight tracking-tight">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/5 to-indigo-600/10 blur-3xl -z-10" />
+            <h1 className="text-5xl sm:text-7xl font-light tracking-tight leading-tight">
               Transforming<br />
-              <span className="text-zinc-400 relative inline-block group">
+              <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text relative inline-block group">
                 Influence
-                <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-700" />
-              </span> into <span className="text-zinc-400 relative inline-block group">
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 group-hover:w-full transition-all duration-700" />
+              </span> into <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text relative inline-block group">
                 Equity
-                <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-700" />
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400 group-hover:w-full transition-all duration-700" />
               </span>
             </h1>
-            <p className="text-lg text-zinc-400 max-w-2xl mx-auto font-light leading-relaxed">
-              We develop white-label software that transforms your audience into high-value digital assets and recurring revenue streams.
+            <p className="text-lg text-zinc-400 tracking-wide leading-relaxed max-w-2xl mx-auto">
+              We develop <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text">white-label software</span> that transforms your audience into high-value digital assets and recurring revenue streams.
             </p>
-          </div>
 
-          {/* Dashboard Preview */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            
-            <div 
-              className="relative aspect-[16/9] rounded-lg border border-zinc-800 overflow-hidden"
-              onMouseMove={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect()
-                const x = e.clientX - rect.left
-                const y = e.clientY - rect.top
-                
-                const spotlight = e.currentTarget.querySelector('.spotlight') as HTMLElement
-                if (spotlight) {
-                  spotlight.style.background = `radial-gradient(circle 150px at ${x}px ${y}px, rgba(139, 92, 246, 0.15), transparent)`
-                }
-              }}
-              onMouseLeave={(e) => {
-                const spotlight = e.currentTarget.querySelector('.spotlight') as HTMLElement
-                if (spotlight) {
-                  spotlight.style.background = 'transparent'
-                }
-              }}
-            >
-              <Image
-                src="/dashboard.webp"
-                alt="Korax Dashboard"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              <div className="spotlight absolute inset-0 transition-all duration-300" />
+            {/* Apply Now Button */}
+            <div className="pt-4">
+              <button
+                onClick={() => setShowForm(true)}
+                className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm tracking-wider overflow-hidden bg-gradient-to-r from-blue-500/20 via-cyan-400/20 to-indigo-500/20 hover:from-blue-500/30 hover:via-cyan-400/30 hover:to-indigo-500/30 backdrop-blur-sm border border-white/10 transition-all duration-300"
+              >
+                <span className="relative z-10 bg-gradient-to-r from-blue-200 via-cyan-100 to-indigo-200 text-transparent bg-clip-text font-medium">APPLY NOW!</span>
+                <ArrowRight size={16} strokeWidth={1.5} className="relative z-10 text-blue-300 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           </div>
 
@@ -199,36 +147,240 @@ export default function Home() {
             ].map((item, index) => (
               <div 
                 key={item.title}
-                className="group p-10 border border-zinc-900 hover:border-zinc-800 transition-all duration-500 relative bg-gradient-to-b from-transparent to-zinc-900/30"
+                className="group p-10 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 relative bg-gradient-to-b from-transparent to-zinc-900/30"
                 style={{
                   transform: `translateY(${index * 20}px)`,
                   opacity: 0,
                   animation: `slideUp 0.5s ease-out ${index * 0.2}s forwards`
                 }}
               >
-                <item.icon size={28} className="text-zinc-500 mb-6 group-hover:text-white/80 transition-colors duration-300" strokeWidth={1} />
-                <h3 className="text-xl font-light mb-4 tracking-wide group-hover:text-white transition-colors duration-300">{item.title}</h3>
+                <div className="relative w-fit">
+                  <item.icon 
+                    size={28} 
+                    className="mb-6 group-hover:scale-110 transition-all duration-300 absolute" 
+                    strokeWidth={1.5}
+                    style={{
+                      stroke: 'white',
+                      opacity: 0.2
+                    }}
+                  />
+                  <item.icon 
+                    size={28} 
+                    className="mb-6 group-hover:scale-110 transition-all duration-300" 
+                    strokeWidth={1.5}
+                    style={{
+                      stroke: 'url(#korax-gradient)'
+                    }}
+                  />
+                </div>
+                <h3 className="text-xl tracking-wide font-light mb-4 group-hover:text-white transition-colors duration-300">
+                  <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text">
+                    {item.title}
+                  </span>
+                </h3>
                 <p className="text-zinc-400 font-light leading-relaxed group-hover:text-zinc-300 transition-colors duration-300">{item.description}</p>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-cyan-400/5 to-indigo-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
 
-          {/* CTA Section */}
-          <div className="text-center space-y-8 py-20 border-y border-zinc-900 relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent blur-3xl -z-10" />
-            <h2 className="text-3xl font-light tracking-wide">Ready to scale your brand?</h2>
-            <p className="text-zinc-400 max-w-2xl mx-auto font-light leading-relaxed">
-              If you have an audience and want to monetize it with innovative software, we can build that for you.
-            </p>
-            <button
-              onClick={() => setShowForm(true)}
-              className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm font-light overflow-hidden bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300"
-            >
-              <span className="relative z-10 text-white/90 group-hover:text-white">APPLY NOW!</span>
-              <ArrowRight size={16} strokeWidth={1} className="relative z-10 text-white/90 group-hover:translate-x-1 transition-transform" />
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-blue-500/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-            </button>
+          {/* Value Transformation Section */}
+          <div className="relative mt-32 mb-16">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/5 to-indigo-600/10 blur-3xl -z-10" />
+            
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-light tracking-wide mb-4">
+                Stop Depending on <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text">Sponsorships</span>
+              </h2>
+              <p className="text-zinc-400 max-w-2xl mx-auto">
+                Transform temporary brand deals into your own tech empire
+              </p>
+            </div>
+
+            {/* Comparison Cards */}
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              <div className="p-8 border border-zinc-800/50 rounded-lg bg-gradient-to-b from-transparent to-zinc-900/30">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-2 h-2 rounded-full bg-red-500/50" />
+                  <h3 className="text-xl tracking-wide font-light">Sponsorship Model</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
+                    <span className="text-zinc-400">Revenue Control</span>
+                    <span className="text-red-400">Brands Decide</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
+                    <span className="text-zinc-400">Long-term Value</span>
+                    <span className="text-red-400">Zero</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
+                    <span className="text-zinc-400">Future Growth</span>
+                    <span className="text-red-400">Limited</span>
+                  </div>
+
+                  <div className="p-4 bg-zinc-900/50 rounded-lg">
+                    <div className="text-sm text-zinc-400 mb-2">Your Audience Benefits</div>
+                    <div className="text-2xl font-light text-red-400">Only Brands</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-8 border border-zinc-800/50 rounded-lg bg-gradient-to-b from-transparent to-zinc-900/30">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500/50" />
+                  <h3 className="text-xl tracking-wide font-light">Your Tech Platform</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
+                    <span className="text-zinc-400">Revenue Control</span>
+                    <span className="text-emerald-400">Full Control</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
+                    <span className="text-zinc-400">Long-term Value</span>
+                    <span className="text-emerald-400">Growing Asset</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
+                    <span className="text-zinc-400">Future Growth</span>
+                    <span className="text-emerald-400">Unlimited</span>
+                  </div>
+
+                  <div className="p-4 bg-zinc-900/50 rounded-lg">
+                    <div className="text-sm text-zinc-400 mb-2">Your Audience Benefits</div>
+                    <div className="text-2xl font-light text-emerald-400">Real Value</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Lost Potential Alert */}
+            <div className="p-8 border border-zinc-800/50 rounded-lg bg-gradient-to-b from-transparent to-zinc-900/30">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500" />
+                <h3 className="text-xl tracking-wide font-light">What You're Missing Right Now</h3>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-6 bg-zinc-900/50 rounded-lg">
+                  <div className="text-4xl font-light text-red-400 mb-4">90%</div>
+                  <div className="text-white mb-2">Audience Value</div>
+                  <p className="text-sm text-zinc-400">Of your audience's potential value is being captured by other platforms</p>
+                </div>
+
+                <div className="p-6 bg-zinc-900/50 rounded-lg">
+                  <div className="text-4xl font-light text-red-400 mb-4">24/7</div>
+                  <div className="text-white mb-2">Revenue Loss</div>
+                  <p className="text-sm text-zinc-400">Missing out on automated revenue while you sleep</p>
+                </div>
+
+                <div className="p-6 bg-zinc-900/50 rounded-lg">
+                  <div className="text-4xl font-light text-red-400 mb-4">0%</div>
+                  <div className="text-white mb-2">Equity Built</div>
+                  <p className="text-sm text-zinc-400">No long-term value being created from your influence</p>
+                </div>
+              </div>
+            </div>
+
+            {/* With KORAX Section */}
+            <div className="mt-12 p-8 border border-zinc-800/50 rounded-lg bg-gradient-to-b from-transparent to-zinc-900/30">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500" />
+                <h3 className="text-xl tracking-wide font-light">Your Future with KORAX</h3>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-6 bg-zinc-900/50 rounded-lg">
+                  <div className="text-4xl font-light text-emerald-400 mb-4">100%</div>
+                  <div className="text-white mb-2">Value Captured</div>
+                  <p className="text-sm text-zinc-400">Own your platform, own your audience's value</p>
+                </div>
+
+                <div className="p-6 bg-zinc-900/50 rounded-lg">
+                  <div className="text-4xl font-light text-emerald-400 mb-4">24/7</div>
+                  <div className="text-white mb-2">Revenue Machine</div>
+                  <p className="text-sm text-zinc-400">Automated income while you create content</p>
+                </div>
+
+                <div className="p-6 bg-zinc-900/50 rounded-lg">
+                  <div className="text-4xl font-light text-emerald-400 mb-4">∞</div>
+                  <div className="text-white mb-2">Growth Potential</div>
+                  <p className="text-sm text-zinc-400">Building real equity in your own tech company</p>
+                </div>
+              </div>
+
+              <div className="mt-8 grid md:grid-cols-2 gap-6">
+                <div className="p-6 bg-gradient-to-r from-blue-500/10 via-cyan-400/10 to-indigo-500/10 rounded-lg">
+                  <h4 className="text-lg font-light mb-4">Your Tech Empire Includes:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+                      <span className="text-zinc-400">Custom-branded platform</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+                      <span className="text-zinc-400">Full technical team & support</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+                      <span className="text-zinc-400">Multiple revenue streams</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+                      <span className="text-zinc-400">Automated operations</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-6 bg-gradient-to-r from-blue-500/10 via-cyan-400/10 to-indigo-500/10 rounded-lg">
+                  <h4 className="text-lg font-light mb-4">You Focus On:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+                      <span className="text-zinc-400">Creating great content</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+                      <span className="text-zinc-400">Growing your audience</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+                      <span className="text-zinc-400">Building your brand</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+                      <span className="text-zinc-400">Enjoying passive income</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Final CTA Section */}
+          <div className="mt-16 sm:mt-24 relative px-4">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/5 to-indigo-600/10 blur-3xl -z-10" />
+            
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-3xl sm:text-5xl font-light tracking-tight mb-6 sm:mb-8 leading-tight">
+                Ready to build your{' '}
+                <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text">
+                  tech company?
+                </span>
+              </h2>
+
+              <button
+                onClick={() => setShowForm(true)}
+                className="group relative inline-flex items-center gap-2 px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg tracking-wider overflow-hidden bg-gradient-to-r from-blue-500/20 via-cyan-400/20 to-indigo-500/20 hover:from-blue-500/30 hover:via-cyan-400/30 hover:to-indigo-500/30 backdrop-blur-sm border border-white/10 transition-all duration-300"
+              >
+                <span className="relative z-10 bg-gradient-to-r from-blue-200 via-cyan-100 to-indigo-200 text-transparent bg-clip-text font-medium">START NOW</span>
+                <ArrowRight size={18} strokeWidth={1.5} className="relative z-10 text-blue-300 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
           </div>
         </main>
 

@@ -47,10 +47,10 @@ const jobs = [
 
 export default function Careers() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-blue-950 to-zinc-900 text-white">
       {/* Header with gradient */}
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent blur-3xl -z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/5 to-indigo-600/10 blur-3xl -z-10" />
         
         <div className="max-w-7xl mx-auto px-6 pt-32 pb-16">
           <Link 
@@ -61,8 +61,8 @@ export default function Careers() {
             Back to home
           </Link>
           
-          <h1 className="text-4xl sm:text-5xl font-extralight tracking-tight mb-6">
-            Work at Korax Labs
+          <h1 className="text-4xl sm:text-5xl font-light tracking-tight mb-6">
+            Work at <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text">Korax Labs</span>
           </h1>
           <p className="text-lg text-zinc-400 font-light max-w-2xl">
             Join a young and dynamic company working with the best technologies. We offer great salaries and above-market bonuses.
@@ -76,7 +76,7 @@ export default function Careers() {
           {jobs.map((job, index) => (
             <div 
               key={job.title}
-              className="group p-8 border border-zinc-900 hover:border-zinc-800 transition-all duration-500 relative bg-gradient-to-b from-transparent to-zinc-900/30"
+              className="group p-8 border border-zinc-800/50 hover:border-zinc-700 transition-all duration-500 relative bg-gradient-to-b from-transparent to-zinc-900/30"
               style={{
                 transform: `translateY(${index * 20}px)`,
                 opacity: 0,
@@ -111,7 +111,7 @@ export default function Careers() {
 
               <button
                 onClick={() => window.location.href = 'mailto:careers@koraxlabs.com'}
-                className="text-sm font-light text-zinc-400 hover:text-white transition-colors"
+                className="text-sm tracking-wider bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text hover:opacity-80 transition-opacity"
               >
                 APPLY NOW
               </button>
