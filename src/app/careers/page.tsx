@@ -90,11 +90,11 @@ export default function Careers() {
                 </div>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-2 text-sm text-zinc-400">
-                    <MapPin size={16} className="text-purple-500" />
+                    <MapPin size={16} className="text-teal-300/90" />
                     {job.location}
                   </div>
                   <div className="flex items-center gap-2 text-sm text-zinc-400">
-                    <DollarSign size={16} className="text-purple-500" />
+                    <DollarSign size={16} className="text-teal-300/90" />
                     {job.salary}
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export default function Careers() {
               <div className="space-y-4 mb-8">
                 {job.description.map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-purple-500/50 mt-2" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-500/30 mt-2" />
                     <p className="flex-1 text-zinc-400 font-light">{item}</p>
                   </div>
                 ))}

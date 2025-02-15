@@ -201,58 +201,58 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <div className="p-8 border border-zinc-800/50 rounded-lg bg-gradient-to-b from-transparent to-zinc-900/30">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-2 h-2 rounded-full bg-blue-500/50" />
+                  <div className="w-2 h-2 rounded-full bg-rose-500/30" />
                   <h3 className="text-xl tracking-wide font-light">Sponsorship Model</h3>
                 </div>
                 
                 <div className="space-y-6">
                   <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
                     <span className="text-zinc-400">Revenue Control</span>
-                    <span className="text-blue-400/75">Brands Decide</span>
+                    <span className="text-rose-300/80">Brands Decide</span>
                   </div>
                   
                   <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
                     <span className="text-zinc-400">Long-term Value</span>
-                    <span className="text-blue-400/75">Zero</span>
+                    <span className="text-rose-300/80">Zero</span>
                   </div>
                   
                   <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
                     <span className="text-zinc-400">Future Growth</span>
-                    <span className="text-blue-400/75">Limited</span>
+                    <span className="text-rose-300/80">Limited</span>
                   </div>
 
                   <div className="p-4 bg-zinc-900/50 rounded-lg">
                     <div className="text-sm text-zinc-400 mb-2">Your Audience Benefits</div>
-                    <div className="text-2xl font-light text-blue-400/75">Only Brands</div>
+                    <div className="text-2xl font-light text-rose-300/80">Only Brands</div>
                   </div>
                 </div>
               </div>
 
               <div className="p-8 border border-zinc-800/50 rounded-lg bg-gradient-to-b from-transparent to-zinc-900/30">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400/50" />
+                  <div className="w-2 h-2 rounded-full bg-teal-500/30" />
                   <h3 className="text-xl tracking-wide font-light">Your Tech Platform</h3>
                 </div>
                 
                 <div className="space-y-6">
                   <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
                     <span className="text-zinc-400">Revenue Control</span>
-                    <span className="text-cyan-300">Full Control</span>
+                    <span className="text-teal-300/90">Full Control</span>
                   </div>
                   
                   <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
                     <span className="text-zinc-400">Long-term Value</span>
-                    <span className="text-cyan-300">Growing Asset</span>
+                    <span className="text-teal-300/90">Growing Asset</span>
                   </div>
                   
                   <div className="flex items-center justify-between p-4 bg-zinc-900/50 rounded-lg">
                     <span className="text-zinc-400">Future Growth</span>
-                    <span className="text-cyan-300">Unlimited</span>
+                    <span className="text-teal-300/90">Unlimited</span>
                   </div>
 
                   <div className="p-4 bg-zinc-900/50 rounded-lg">
                     <div className="text-sm text-zinc-400 mb-2">Your Audience Benefits</div>
-                    <div className="text-2xl font-light text-cyan-300">Real Value</div>
+                    <div className="text-2xl font-light text-teal-300/90">Real Value</div>
                   </div>
                 </div>
               </div>
@@ -267,19 +267,19 @@ export default function Home() {
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="p-6 bg-zinc-900/50 rounded-lg">
-                  <div className="text-4xl font-light text-blue-400/75 mb-4">90%</div>
+                  <div className="text-4xl font-light text-rose-300/80 mb-4">90%</div>
                   <div className="text-white mb-2">Audience Value</div>
                   <p className="text-sm text-zinc-400">Of your audience's potential value is being captured by other platforms</p>
                 </div>
 
                 <div className="p-6 bg-zinc-900/50 rounded-lg">
-                  <div className="text-4xl font-light text-blue-400/75 mb-4">24/7</div>
+                  <div className="text-4xl font-light text-rose-300/80 mb-4">24/7</div>
                   <div className="text-white mb-2">Revenue Loss</div>
                   <p className="text-sm text-zinc-400">Missing out on automated revenue while you sleep</p>
                 </div>
 
                 <div className="p-6 bg-zinc-900/50 rounded-lg">
-                  <div className="text-4xl font-light text-blue-400/75 mb-4">0%</div>
+                  <div className="text-4xl font-light text-rose-300/80 mb-4">0%</div>
                   <div className="text-white mb-2">Equity Built</div>
                   <p className="text-sm text-zinc-400">No long-term value being created from your influence</p>
                 </div>
@@ -295,19 +295,19 @@ export default function Home() {
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="p-6 bg-zinc-900/50 rounded-lg">
-                  <div className="text-4xl font-light text-cyan-300 mb-4">100%</div>
+                  <div className="text-4xl font-light text-teal-300/90 mb-4">100%</div>
                   <div className="text-white mb-2">Value Captured</div>
                   <p className="text-sm text-zinc-400">Own your platform, own your audience's value</p>
                 </div>
 
                 <div className="p-6 bg-zinc-900/50 rounded-lg">
-                  <div className="text-4xl font-light text-cyan-300 mb-4">24/7</div>
+                  <div className="text-4xl font-light text-teal-300/90 mb-4">24/7</div>
                   <div className="text-white mb-2">Revenue Machine</div>
                   <p className="text-sm text-zinc-400">Automated income while you create content</p>
                 </div>
 
                 <div className="p-6 bg-zinc-900/50 rounded-lg">
-                  <div className="text-4xl font-light text-cyan-300 mb-4">∞</div>
+                  <div className="text-4xl font-light text-teal-300/90 mb-4">∞</div>
                   <div className="text-white mb-2">Growth Potential</div>
                   <p className="text-sm text-zinc-400">Building real equity in your own tech company</p>
                 </div>
