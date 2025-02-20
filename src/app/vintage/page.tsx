@@ -4,8 +4,8 @@
 import { useState, useEffect } from 'react'
 import Image from "next/image";
 import { Target, Code, Rocket, Trophy, ArrowRight, MousePointer2, Sparkles } from "lucide-react";
-import ContactForm from './components/ContactForm'
 import Link from 'next/link'
+import ContactForm from '../components/ContactForm'
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false)
