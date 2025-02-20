@@ -33,9 +33,12 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
     apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.ico',
   },
   manifest: '/manifest.json',
   appleWebApp: {
@@ -99,14 +102,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link 
           rel="icon" 
-          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'><rect width='32' height='32' fill='black'/><g stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><line x1='8' y1='8' x2='24' y2='24'/><line x1='24' y1='8' x2='8' y2='24'/><line x1='16' y1='8' x2='16' y2='24'/></g></svg>"
           type="image/svg+xml"
-        />
-        {/* Favicon com gradiente e raio */}
-        <link
-          rel="icon"
-          type="image/svg+xml"
-          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2393C5FD;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%2367E8F9;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23A5B4FC;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 5 L65 45 L85 45 L40 95 L45 60 L25 60 Z' fill='url(%23grad)' /%3E%3C/svg%3E"
         />
       </head>
       <body className={`${spaceGrotesk.className} antialiased`}>
