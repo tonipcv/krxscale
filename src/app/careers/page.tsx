@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowLeft, MapPin, DollarSign, Globe2 } from 'lucide-react'
+import { ArrowLeft, MapPin, DollarSign, ArrowRight } from 'lucide-react'
 
 const jobs = [
   {
@@ -47,26 +47,66 @@ const jobs = [
 
 export default function Careers() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-blue-950 to-zinc-900 text-white">
-      {/* Header with gradient */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/5 to-indigo-600/10 blur-3xl -z-10" />
-        
-        <div className="max-w-7xl mx-auto px-6 pt-32 pb-16">
+    <div className="min-h-screen bg-[#030303] text-white">
+      {/* Navbar */}
+      <nav className="fixed w-full top-0 border-b border-white/5 backdrop-blur-md z-40 transition-all duration-300">
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-3 group">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 512 512"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="group-hover:scale-110 transition-transform duration-300"
+              >
+                <g stroke="white" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="128" y1="128" x2="256" y2="256" />
+                  <line x1="256" y1="256" x2="384" y2="128" />
+                  <line x1="256" y1="256" x2="128" y2="384" />
+                  <line x1="256" y1="256" x2="384" y2="384" />
+                  <line x1="256" y1="128" x2="256" y2="384" />
+                </g>
+              </svg>
+              <span className="text-xl tracking-[-0.03em] font-satoshi">KRX</span>
+            </Link>
+
+            {/* Right Side Navigation */}
+            <div className="flex items-center gap-4 sm:gap-6">
+              <Link
+                href="/careers"
+                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-400 hover:text-white transition-colors"
+              >
+                <span className="hidden sm:inline">CAREERS</span>
+                <span className="sm:hidden text-xs">JOBS</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Header */}
+      <div className="relative pt-32">
+        <div className="absolute inset-0 bg-white/[0.02] blur-3xl -z-10" />
+        <div className="max-w-7xl mx-auto px-6 pb-16">
           <Link 
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm font-euclidCircularB tracking-[-0.04em] text-zinc-400 hover:text-white transition-colors mb-8"
           >
             <ArrowLeft size={16} />
             Back to home
           </Link>
           
-          <h1 className="text-4xl sm:text-5xl font-light tracking-tight mb-6">
-            Work at <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text">Korax Labs</span>
+          <h1 className="text-7xl sm:text-8xl font-satoshi tracking-[-0.03em] leading-[1.1] sm:leading-tight mb-6">
+            <span className="text-white/90 relative inline-block group">
+              Join
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-white/20 group-hover:w-full transition-all duration-700" />
+            </span>
+            <br />
+            <span className="text-white/80">the Future</span>
           </h1>
-          <p className="text-lg text-zinc-400 font-light max-w-2xl">
-            Join a young and dynamic company working with the best technologies. We offer great salaries and above-market bonuses.
-          </p>
         </div>
       </div>
 
@@ -76,7 +116,7 @@ export default function Careers() {
           {jobs.map((job, index) => (
             <div 
               key={job.title}
-              className="group p-8 border border-zinc-800/50 hover:border-zinc-700 transition-all duration-500 relative bg-gradient-to-b from-transparent to-zinc-900/30"
+              className="group p-8 border border-white/5 hover:border-white/10 transition-all duration-500 relative bg-white/[0.02]"
               style={{
                 transform: `translateY(${index * 20}px)`,
                 opacity: 0,
@@ -85,16 +125,16 @@ export default function Careers() {
             >
               <div className="flex flex-col lg:flex-row lg:items-center gap-6 mb-8">
                 <div className="flex-1 space-y-2">
-                  <h2 className="text-2xl font-light">{job.title}</h2>
-                  <p className="text-zinc-400 font-light">{job.department}</p>
+                  <h2 className="text-2xl font-satoshi tracking-[-0.03em]">{job.title}</h2>
+                  <p className="text-zinc-400 font-euclidCircularB tracking-[-0.04em]">{job.department}</p>
                 </div>
                 <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center gap-2 text-sm text-zinc-400">
-                    <MapPin size={16} className="text-teal-300/90" />
+                  <div className="flex items-center gap-2 text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em]">
+                    <MapPin size={16} className="text-white/70" />
                     {job.location}
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-zinc-400">
-                    <DollarSign size={16} className="text-teal-300/90" />
+                  <div className="flex items-center gap-2 text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em]">
+                    <DollarSign size={16} className="text-white/70" />
                     {job.salary}
                   </div>
                 </div>
@@ -103,21 +143,29 @@ export default function Careers() {
               <div className="space-y-4 mb-8">
                 {job.description.map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-teal-500/30 mt-2" />
-                    <p className="flex-1 text-zinc-400 font-light">{item}</p>
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/20 mt-2" />
+                    <p className="flex-1 text-zinc-400 font-euclidCircularB tracking-[-0.04em]">{item}</p>
                   </div>
                 ))}
               </div>
 
               <button
                 onClick={() => window.location.href = 'mailto:careers@koraxlabs.com'}
-                className="text-sm tracking-wider bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text hover:opacity-80 transition-opacity"
+                className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300"
               >
-                APPLY NOW
+                <span className="relative z-10 text-white/90">APPLY NOW!</span>
+                <ArrowRight size={16} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Made by KRX */}
+      <div className="pb-8 text-center">
+        <p className="text-sm font-euclidCircularB tracking-[-0.04em] text-zinc-600">
+          made by <span className="text-zinc-500">krx</span>
+        </p>
       </div>
 
       <style jsx global>{`

@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
+import { useState } from 'react'
+import { ArrowRight } from "lucide-react"
 import Link from 'next/link'
-import { ArrowLeft } from "lucide-react"
 
-export default function Success() {
+export default function Home() {
+  const [showForm, setShowForm] = useState(false)
+
   return (
     <div className="min-h-screen bg-[#030303] text-white overflow-hidden">
       {/* Navbar */}
@@ -11,7 +15,7 @@ export default function Success() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <div className="flex items-center gap-3 group">
               <svg
                 width="40"
                 height="40"
@@ -29,7 +33,7 @@ export default function Success() {
                 </g>
               </svg>
               <span className="text-xl tracking-[-0.03em] font-satoshi">KRX</span>
-            </Link>
+            </div>
 
             {/* Right Side Navigation */}
             <div className="flex items-center gap-4 sm:gap-6">
@@ -47,26 +51,28 @@ export default function Success() {
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <main className="min-h-screen flex flex-col">
-          {/* Success Section */}
+          {/* Hero Section */}
           <div className="flex-1 flex items-center justify-center">
             <div className="text-center space-y-8 relative -mt-20">
               <div className="absolute inset-0 bg-white/[0.02] blur-3xl -z-10" />
-              <h1 className="text-7xl sm:text-8xl font-satoshi tracking-[-0.03em] leading-[1.1] sm:leading-tight">
+              <h1 className="text-7xl sm:text-8xl font-satoshi tracking-[-0.03em] leading-tight">
                 <span className="text-white/90 relative inline-block group">
-                  Application Submitted
+                  Building
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-white/20 group-hover:w-full transition-all duration-700" />
                 </span>
+                <br />
+                <span className="text-white/80">the Future</span>
               </h1>
 
-              {/* Back Button */}
+              {/* Apply Now Button */}
               <div className="pt-4">
-                <Link
-                  href="/"
+                <button
+                  onClick={() => setShowForm(true)}
                   className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300"
                 >
-                  <ArrowLeft size={16} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:-translate-x-1 transition-transform" />
-                  <span className="relative z-10 text-white/90">BACK HOME</span>
-                </Link>
+                  <span className="relative z-10 text-white/90">APPLY NOW!</span>
+                  <ArrowRight size={16} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
             </div>
           </div>
@@ -81,4 +87,4 @@ export default function Success() {
       </div>
     </div>
   )
-} 
+}

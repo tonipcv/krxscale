@@ -6,9 +6,21 @@ import toast, { Toaster } from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 import { X, Send, User, Mail, Phone, Users, DollarSign } from 'lucide-react'
 
-export default function ContactForm({ onClose }: { onClose: () => void }) {
+interface ContactFormProps {
+  onClose: () => void
+}
+
+export default function ContactForm({ onClose }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    whatsapp: '',
+    audienceSize: '',
+    currentRevenue: '',
+    message: ''
+  })
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -21,6 +33,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
       whatsapp: formData.get('whatsapp'),
       audienceSize: formData.get('audienceSize'),
       currentRevenue: formData.get('currentRevenue'),
+      message: formData.get('message')
     }
 
     try {
@@ -44,74 +57,82 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
   }
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-zinc-900/98 via-blue-950/98 to-zinc-900/98 flex items-center justify-center p-4 z-50 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 bg-black/90 flex items-center justify-center p-4 z-50 backdrop-blur-sm animate-fadeIn">
       <Toaster position="top-center" />
       
-      <div className="bg-gradient-to-br from-zinc-900/50 via-blue-950/30 to-zinc-900/50 backdrop-blur-md p-8 sm:p-12 rounded-lg w-full max-w-xl border border-zinc-800/50 relative animate-slideUp">
+      <div className="bg-[#030303] p-8 sm:p-12 w-full max-w-xl border border-white/5 relative animate-slideUp">
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full"
+          className="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors"
         >
           <X size={20} className="stroke-[1.5]" />
         </button>
         
         <div className="space-y-3 mb-8">
-          <h2 className="text-2xl sm:text-3xl font-light tracking-wide">
-            Let's <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-indigo-300 text-transparent bg-clip-text">Talk</span>
+          <h2 className="text-2xl sm:text-3xl font-satoshi tracking-[-0.03em]">
+            Let's Talk
           </h2>
-          <p className="text-zinc-400 font-light text-sm sm:text-base">Tell us a bit about you and your project</p>
+          <p className="text-zinc-400 font-euclidCircularB tracking-[-0.04em]">Tell us a bit about you and your project</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="space-y-2 group">
-              <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
-                <User size={16} className="text-zinc-500 group-hover:text-blue-300 transition-colors" />
+            <div className="space-y-2">
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <User size={16} className="text-zinc-500" />
                 Name
               </label>
               <input
                 type="text"
                 name="name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
-                className="w-full bg-zinc-900/50 border border-zinc-800/50 p-3 sm:p-4 rounded-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-blue-800/50 focus:ring-1 focus:ring-blue-800/50 transition-all"
+                className="w-full bg-white/5 border border-white/10 p-3 sm:p-4 text-white font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-white/20"
               />
             </div>
-            <div className="space-y-2 group">
-              <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
-                <Mail size={16} className="text-zinc-500 group-hover:text-blue-300 transition-colors" />
+            <div className="space-y-2">
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Mail size={16} className="text-zinc-500" />
                 Email
               </label>
               <input
                 type="email"
                 name="email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
-                className="w-full bg-zinc-900/50 border border-zinc-800/50 p-3 sm:p-4 rounded-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-blue-800/50 focus:ring-1 focus:ring-blue-800/50 transition-all"
+                className="w-full bg-white/5 border border-white/10 p-3 sm:p-4 text-white font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-white/20"
               />
             </div>
           </div>
 
-          <div className="space-y-2 group">
-            <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
-              <Phone size={16} className="text-zinc-500 group-hover:text-blue-300 transition-colors" />
+          <div className="space-y-2">
+            <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+              <Phone size={16} className="text-zinc-500" />
               WhatsApp
             </label>
             <input
               type="tel"
               name="whatsapp"
+              value={formData.whatsapp}
+              onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
               required
-              className="w-full bg-zinc-900/50 border border-zinc-800/50 p-3 sm:p-4 rounded-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-blue-800/50 focus:ring-1 focus:ring-blue-800/50 transition-all"
+              className="w-full bg-white/5 border border-white/10 p-3 sm:p-4 text-white font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-white/20"
             />
           </div>
 
-          <div className="space-y-2 group">
-            <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
-              <Users size={16} className="text-zinc-500 group-hover:text-blue-300 transition-colors" />
+          <div className="space-y-2">
+            <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+              <Users size={16} className="text-zinc-500" />
               Audience Size
             </label>
             <select
               name="audienceSize"
+              value={formData.audienceSize}
+              onChange={(e) => setFormData({ ...formData, audienceSize: e.target.value })}
               required
-              className="w-full bg-zinc-900/50 border border-zinc-800/50 p-3 sm:p-4 rounded-sm text-white focus:outline-none focus:border-blue-800/50 focus:ring-1 focus:ring-blue-800/50 transition-all appearance-none"
+              className="w-full bg-white/5 border border-white/10 p-3 sm:p-4 text-white font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-white/20 appearance-none"
             >
               <option value="">Select</option>
               <option value="0-10k">0 - 10k followers</option>
@@ -121,15 +142,17 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             </select>
           </div>
 
-          <div className="space-y-2 group">
-            <label className="text-sm text-zinc-400 font-light flex items-center gap-2">
-              <DollarSign size={16} className="text-zinc-500 group-hover:text-blue-300 transition-colors" />
+          <div className="space-y-2">
+            <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+              <DollarSign size={16} className="text-zinc-500" />
               Monthly Revenue
             </label>
             <select
               name="currentRevenue"
+              value={formData.currentRevenue}
+              onChange={(e) => setFormData({ ...formData, currentRevenue: e.target.value })}
               required
-              className="w-full bg-zinc-900/50 border border-zinc-800/50 p-3 sm:p-4 rounded-sm text-white focus:outline-none focus:border-blue-800/50 focus:ring-1 focus:ring-blue-800/50 transition-all appearance-none"
+              className="w-full bg-white/5 border border-white/10 p-3 sm:p-4 text-white font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-white/20 appearance-none"
             >
               <option value="">Select</option>
               <option value="0-10k">$0 - $10k/month</option>
@@ -139,15 +162,28 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
             </select>
           </div>
 
+          <div className="space-y-2">
+            <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+              Message
+            </label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              className="w-full bg-white/5 border border-white/10 p-3 sm:p-4 text-white font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-white/20 h-32 resize-none"
+              required
+            />
+          </div>
+
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-4 mt-4 bg-gradient-to-r from-blue-500/20 via-cyan-400/20 to-indigo-500/20 hover:from-blue-500/30 hover:via-cyan-400/30 hover:to-indigo-500/30 text-white font-light tracking-wider transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed rounded-sm group relative overflow-hidden border border-zinc-800/50"
+            className="w-full group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300"
           >
-            <span className="relative z-10 bg-gradient-to-r from-blue-200 via-cyan-100 to-indigo-200 text-transparent bg-clip-text font-medium inline-flex items-center gap-2">
-              {isSubmitting ? 'SENDING...' : 'CONTINUE'}
-              <Send size={16} className="group-hover:translate-x-1 transition-transform" />
+            <span className="relative z-10 text-white/90">
+              {isSubmitting ? 'SENDING...' : 'SUBMIT APPLICATION'}
             </span>
+            <Send size={16} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:translate-x-1 transition-transform" />
           </button>
         </form>
       </div>
