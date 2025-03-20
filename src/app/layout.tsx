@@ -11,7 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'KRX Lab | Build your app in 48 hours',
+  title: 'KRX Lab | IA Skills',
   description: 'Transform your influence into a scalable tech company. Build your custom app in just 48 hours and be prepared to scale. Join KRX Lab and start building the future.',
   keywords: [
     'custom app development',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'KRX Lab | Build your app in 48 hours',
+    title: 'KRX Lab | IA Skills',
     description: 'Transform your influence into a scalable tech company. Build your custom app in just 48 hours and be prepared to scale.',
     url: 'https://krxlab.com',
     siteName: 'KRX Lab',
