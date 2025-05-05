@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'KRX Lab | IA Skills',
+    title: 'KRX Lab | AI Infrastructure',
     description: 'Transform your influence into a scalable tech company. Build your custom app in just 48 hours and be prepared to scale.',
     url: 'https://krxlab.com',
     siteName: 'KRX Lab',
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KRX Lab | Build your app in 48 hours',
+    title: 'KRX Lab | AI Infrastructure',
     description: 'Transform your influence into a scalable tech company. Build your custom app in just 48 hours and be prepared to scale.',
     images: [`data:image/svg+xml,${encodeURIComponent(KRX_SOCIAL_IMAGE_SVG)}`],
   },
