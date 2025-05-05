@@ -1,16 +1,14 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { Globe } from 'lucide-react'
-import { useLanguage } from '@/app/components/LanguageProvider'
-import NewsletterForm from '@/app/components/NewsletterForm'
+import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { useLanguage } from '@/app/components/LanguageProvider';
 
-export default function NewsletterPage() {
-  const { t, language, setLanguage } = useLanguage()
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'pt' ? 'en' : 'pt')
-  }
+export default function NewsletterConfirmation() {
+  const searchParams = useSearchParams();
+  const email = searchParams.get('email') || '';
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-[#030303] text-white flex flex-col">
@@ -41,13 +39,6 @@ export default function NewsletterPage() {
 
             {/* Right Side Navigation */}
             <div className="flex items-center gap-4 sm:gap-6">
-              <button 
-                onClick={toggleLanguage}
-                className="flex items-center gap-1 text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-400 hover:text-white transition-colors"
-              >
-                <Globe size={16} />
-                <span className="hidden sm:inline">{language === 'pt' ? 'PT' : 'EN'}</span>
-              </button>
               <Link
                 href="/blog"
                 className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-400 hover:text-white transition-colors"
@@ -59,27 +50,43 @@ export default function NewsletterPage() {
         </div>
       </nav>
 
-      {/* Newsletter Content */}
+      {/* Confirmation Content */}
       <div className="flex-1 flex items-center justify-center">
-        <div className="max-w-xl w-full mx-auto px-6 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl sm:text-4xl font-satoshi tracking-[-0.03em] leading-tight mb-6">
-              <span className="bg-gradient-to-r from-white/95 to-white/60 text-transparent bg-clip-text">
-                {t('blog.newsletter')}
-              </span>
-            </h1>
-            
-            <p className="text-white/80 text-lg mb-2">
-              Fique atualizado com as últimas novidades sobre IA.
-            </p>
-            
-            <p className="text-zinc-400">
-              Assine nossa newsletter para receber dicas, ferramentas e insights sobre o mundo da Inteligência Artificial.
-            </p>
+        <div className="max-w-xl w-full mx-auto px-6 py-16 text-center">
+          <div className="flex justify-center mb-6">
+            <CheckCircle size={64} className="text-white/80" />
           </div>
           
-          <div className="bg-white/5 border border-white/10 p-8 rounded-sm">
-            <NewsletterForm />
+          <h1 className="text-3xl sm:text-4xl font-satoshi tracking-[-0.03em] leading-tight mb-6">
+            <span className="bg-gradient-to-r from-white/95 to-white/60 text-transparent bg-clip-text">
+              Inscrição Confirmada!
+            </span>
+          </h1>
+          
+          <p className="text-white/80 text-lg mb-2">
+            Obrigado por se inscrever em nossa newsletter.
+          </p>
+          
+          <p className="text-zinc-400 mb-8">
+            {email ? (
+              <>Enviamos uma confirmação para <span className="text-white">{email}</span>.</>
+            ) : (
+              <>Enviamos uma confirmação para o seu email.</>
+            )}
+          </p>
+          
+          <div className="space-y-4">
+            <p className="text-zinc-400 mb-6">
+              Fique atento à sua caixa de entrada para receber as últimas novidades sobre IA, produtividade e o futuro do trabalho.
+            </p>
+            
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-euclidCircularB transition-all duration-300"
+            >
+              <span>Explorar Blog</span>
+              <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </div>
@@ -91,5 +98,5 @@ export default function NewsletterPage() {
         </p>
       </footer>
     </div>
-  )
+  );
 } 

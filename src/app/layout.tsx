@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google';
 import { KRX_ICON_SVG, KRX_SOCIAL_IMAGE_SVG } from '@/constants/brand'
 import Script from "next/script"
+import { LanguageProvider } from './components/LanguageProvider'
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
@@ -155,7 +156,9 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

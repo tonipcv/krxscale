@@ -7,6 +7,8 @@ export default function AIToolsPage() {
   const [step, setStep] = useState(1)
   const [userType, setUserType] = useState('')
   const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   
   const handleContinue = () => {
     setStep(2)
@@ -17,10 +19,45 @@ export default function AIToolsPage() {
     setStep(3)
   }
   
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email) {
-      setStep(4)
+    setLoading(true)
+    setError('')
+
+    if (!email) {
+      setError('Por favor, informe seu email')
+      setLoading(false)
+      return
+    }
+    
+    try {
+      // Enviar dados para a API
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: 'Usuário da Página 66',  // Nome genérico
+          email: email,
+          whatsapp: '',  // Campo obrigatório no modelo, mas não coletamos aqui
+          audienceSize: userType, // Usamos o userType como audienceSize
+          currentRevenue: '',  // Campo obrigatório no modelo, mas não coletamos aqui
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || 'Erro ao salvar dados');
+      }
+      
+      // Avançar para o próximo passo após salvar com sucesso
+      setStep(4);
+    } catch (err: any) {
+      console.error('Erro ao salvar lead:', err);
+      setError(err.message || 'Ocorreu um erro ao processar sua solicitação');
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -78,12 +115,17 @@ export default function AIToolsPage() {
                 placeholder="seu@email.com"
                 required
                 className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20"
+                disabled={loading}
               />
+              {error && (
+                <p className="text-red-400 text-sm">{error}</p>
+              )}
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-euclidCircularB transition-all duration-300"
+                className={`w-full px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-euclidCircularB transition-all duration-300 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                disabled={loading}
               >
-                Enviar
+                {loading ? 'Enviando...' : 'Enviar'}
               </button>
             </form>
           </div>
