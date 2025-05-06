@@ -21,8 +21,9 @@ const translations = {
     'nav.jobs': 'JOBS',
     
     // Home
-    'home.building': 'Building',
-    'home.theFuture': 'the Future',
+    'home.building': 'Precision-built technology',
+    'home.theFuture': '',
+    'home.description': 'KRX Labs designs custom software infrastructures, designed for companies operating in fast-growing markets — where every second counts, and technology needs to respond with surgical precision and strategic purpose.',
     'home.applyNow': 'APPLY NOW!',
     'home.exploreBlog': 'EXPLORE BLOG',
     'home.ourBlog': 'Our ',
@@ -61,8 +62,9 @@ const translations = {
     'nav.jobs': 'VAGAS',
     
     // Home
-    'home.building': 'Construindo',
-    'home.theFuture': 'o Futuro',
+    'home.building': 'Precision-built technology',
+    'home.theFuture': '',
+    'home.description': 'A KRX Labs projeta infraestruturas de software sob medida, concebidas para empresas que operam em mercados de crescimento acelerado — onde cada segundo conta, e a tecnologia precisa responder com precisão cirúrgica e propósito estratégico.',
     'home.applyNow': 'INSCREVA-SE!',
     'home.exploreBlog': 'EXPLORAR BLOG',
     'home.ourBlog': 'Nosso ',
