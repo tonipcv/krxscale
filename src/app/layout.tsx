@@ -13,8 +13,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'KRX Lab | IA Skills',
-  description: 'Transform your influence into a scalable tech company. Build your custom app in just 48 hours and be prepared to scale. Join KRX Lab and start building the future.',
+  title: 'KRX Lab | Software Infrastructure',
+  description: 'KRX Labs designs custom software infrastructures for companies operating in fast-growing markets — where every second matters and technology needs to respond with surgical precision and strategic intent.',
   keywords: [
     'custom app development',
     'rapid app deployment',
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'KRX Lab | AI Infrastructure',
-    description: 'Transform your influence into a scalable tech company. Build your custom app in just 48 hours and be prepared to scale.',
+    description: 'KRX Labs designs custom software infrastructures for companies operating in fast-growing markets — where every second matters and technology needs to respond with surgical precision and strategic intent.',
     url: 'https://krxlab.com',
     siteName: 'KRX Lab',
     images: [
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'KRX Lab | AI Infrastructure',
-    description: 'Transform your influence into a scalable tech company. Build your custom app in just 48 hours and be prepared to scale.',
+    description: 'KRX Labs designs custom software infrastructures for companies operating in fast-growing markets — where every second matters and technology needs to respond with surgical precision and strategic intent.',
     images: [`data:image/svg+xml,${encodeURIComponent(KRX_SOCIAL_IMAGE_SVG)}`],
   },
   verification: {
