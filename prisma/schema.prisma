@@ -11,9 +11,11 @@ model Lead {
   id               Int      @id @default(autoincrement())
   name             String
   email            String
-  whatsapp         String
-  audienceSize     String
-  currentRevenue   String
+  phone            String
+  sector           String
+  employees        String
+  arr              String
+  needs            String
   createdAt        DateTime @default(now())
 }
 

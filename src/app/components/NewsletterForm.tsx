@@ -61,46 +61,48 @@ export default function NewsletterForm() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto text-center space-y-6">
-      <h3 className="text-2xl font-satoshi tracking-[-0.03em]">{t('blog.newsletter')}</h3>
-      <p className="text-zinc-400 font-euclidCircularB tracking-[-0.04em]">
-        {t('blog.newsletterDesc')}
-      </p>
-      
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 mt-6">
-        <input 
-          type="email" 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder={t('blog.yourEmail')}
-          className="flex-grow px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-white/20"
-          required
-          disabled={loading}
-        />
-        <button 
-          type="submit"
-          className={`px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-euclidCircularB transition-all duration-300 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-          disabled={loading}
-        >
-          {loading ? (
-            <span className="flex items-center gap-2">
-              <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-              Enviando...
-            </span>
-          ) : t('blog.subscribe')}
-        </button>
-      </form>
-      
-      {error && (
-        <p className="text-sm text-red-400 mt-2">{error}</p>
-      )}
-      
-      <p className="text-xs text-zinc-500 font-euclidCircularB tracking-[-0.04em]">
-        {t('blog.noSpam')}
-      </p>
+    <div className="max-w-3xl mx-auto bg-zinc-100 p-8 border border-zinc-200 rounded-sm">
+      <div className="text-center space-y-6">
+        <h3 className="text-2xl font-satoshi tracking-[-0.03em] text-zinc-800">{t('blog.newsletter')}</h3>
+        <p className="text-zinc-600 font-euclidCircularB tracking-[-0.04em]">
+          {t('blog.newsletterDesc')}
+        </p>
+        
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 mt-6">
+          <input 
+            type="email" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={t('blog.yourEmail')}
+            className="flex-grow px-4 py-3 bg-white border border-zinc-200 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-300"
+            required
+            disabled={loading}
+          />
+          <button 
+            type="submit"
+            className={`px-6 py-3 bg-zinc-800 hover:bg-zinc-900 border border-zinc-900 text-white font-euclidCircularB transition-all duration-300 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            disabled={loading}
+          >
+            {loading ? (
+              <span className="flex items-center gap-2">
+                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Enviando...
+              </span>
+            ) : t('blog.subscribe')}
+          </button>
+        </form>
+        
+        {error && (
+          <p className="text-sm text-red-500 mt-2">{error}</p>
+        )}
+        
+        <p className="text-xs text-zinc-500 font-euclidCircularB tracking-[-0.04em]">
+          {t('blog.noSpam')}
+        </p>
+      </div>
     </div>
   );
 } 

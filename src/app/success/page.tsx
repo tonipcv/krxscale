@@ -5,9 +5,9 @@ import { ArrowLeft } from "lucide-react"
 
 export default function Success() {
   return (
-    <div className="min-h-screen bg-[#030303] text-white overflow-hidden">
+    <div className="min-h-screen bg-white text-zinc-800 overflow-hidden">
       {/* Navbar */}
-      <nav className="fixed w-full top-0 border-b border-white/5 backdrop-blur-md z-40 transition-all duration-300">
+      <nav className="fixed w-full top-0 border-b border-zinc-200 backdrop-blur-md z-40 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -20,7 +20,7 @@ export default function Success() {
                 xmlns="http://www.w3.org/2000/svg"
                 className="group-hover:scale-110 transition-transform duration-300"
               >
-                <g stroke="white" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
+                <g stroke="#111111" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="128" y1="128" x2="256" y2="256" />
                   <line x1="256" y1="256" x2="384" y2="128" />
                   <line x1="256" y1="256" x2="128" y2="384" />
@@ -35,7 +35,7 @@ export default function Success() {
             <div className="flex items-center gap-4 sm:gap-6">
               <Link
                 href="/careers"
-                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-400 hover:text-white transition-colors"
+                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
               >
                 <span className="hidden sm:inline">CAREERS</span>
                 <span className="sm:hidden text-xs">JOBS</span>
@@ -50,11 +50,11 @@ export default function Success() {
           {/* Success Section */}
           <div className="flex-1 flex items-center justify-center">
             <div className="text-center space-y-8 relative -mt-20">
-              <div className="absolute inset-0 bg-white/[0.02] blur-3xl -z-10" />
+              <div className="absolute inset-0 bg-zinc-100 blur-3xl -z-10" />
               <h1 className="text-7xl sm:text-8xl font-satoshi tracking-[-0.03em] leading-[1.1] sm:leading-tight">
-                <span className="text-white/90 relative inline-block group">
+                <span className="text-zinc-800 relative inline-block group">
                   Application Submitted
-                  <span className="absolute bottom-0 left-0 w-0 h-px bg-white/20 group-hover:w-full transition-all duration-700" />
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-zinc-300 group-hover:w-full transition-all duration-700" />
                 </span>
               </h1>
 
@@ -62,10 +62,10 @@ export default function Success() {
               <div className="pt-4">
                 <Link
                   href="/"
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-zinc-100 hover:bg-zinc-200 border border-zinc-200 transition-all duration-300"
                 >
-                  <ArrowLeft size={16} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:-translate-x-1 transition-transform" />
-                  <span className="relative z-10 text-white/90">BACK HOME</span>
+                  <ArrowLeft size={16} strokeWidth={1.5} className="relative z-10 text-zinc-600 group-hover:-translate-x-1 transition-transform" />
+                  <span className="relative z-10 text-zinc-800">BACK HOME</span>
                 </Link>
               </div>
             </div>
@@ -73,8 +73,8 @@ export default function Success() {
 
           {/* Made by KRX */}
           <div className="pb-8 text-center">
-            <p className="text-sm font-euclidCircularB tracking-[-0.04em] text-zinc-600">
-              made by <span className="text-zinc-500">krx</span>
+            <p className="text-sm font-euclidCircularB tracking-[-0.04em] text-zinc-400">
+              made by <span className="text-zinc-600">krx</span>
             </p>
           </div>
         </main>
