@@ -1,4 +1,12 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-Sitemap: https://koraxlabs.com/sitemap.xml 
+# Sitemap location
+Sitemap: https://krxlab.com/sitemap.xml
+
+# Specific paths
+Allow: /66
+Allow: /careers
+Disallow: /api/
+Disallow: /_next/ 

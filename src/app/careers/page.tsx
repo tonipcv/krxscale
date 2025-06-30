@@ -5,42 +5,55 @@ import { ArrowLeft, MapPin, DollarSign, ArrowRight } from 'lucide-react'
 
 const jobs = [
   {
-    title: 'Python Developer',
-    department: 'IT',
-    location: 'Abu Dhabi',
-    salary: '$15,000 / Month',
+    title: 'Security Engineer',
+    department: 'KRXShield & KRXOps',
+    location: 'Remote',
+    salary: '30-45k/year',
     description: [
-      'Proficient in Python, with knowledge of at least one Python web framework (e.g., Django, Flask).',
-      'Understanding of server-side templating languages and front-end technologies.',
-      'Familiarity with ORM (Object Relational Mapping) libraries.',
-      'Able to integrate multiple data sources and databases into one system.',
-      'Excellent problem-solving skills and teamwork abilities.'
+      'Design and implement advanced endpoint protection systems using AI and machine learning',
+      'Develop real-time threat detection and automated response mechanisms',
+      'Create and maintain security operations center (SOC) monitoring systems',
+      'Build automated incident response workflows and threat containment protocols',
+      'Experience with Python, Go, or Rust and modern security frameworks'
     ]
   },
   {
-    title: 'UI Developer',
-    department: 'Design',
-    location: 'Abu Dhabi',
-    salary: '$8,000 / Month',
+    title: 'Mobile Security Developer',
+    department: 'KRXMobile',
+    location: 'Remote',
+    salary: '25-35k/year',
     description: [
-      'Proven UI/UX design experience with a strong portfolio.',
-      'Proficiency in visual design and wireframing tools (e.g., Adobe XD, Sketch, Figma).',
-      'Excellent visual design skills with sensitivity to user-system interaction.',
-      'Ability to solve problems creatively and effectively.',
-      'Up-to-date with the latest UI trends, techniques, and technologies.'
+      'Develop enterprise-grade mobile security solutions for iOS and Android platforms',
+      'Implement secure container technologies and zero-trust architectures',
+      'Create secure VPN solutions and encrypted communication channels',
+      'Build mobile device management (MDM) systems and security policy enforcement',
+      'Experience with mobile app security, Swift, Kotlin, and security frameworks'
     ]
   },
   {
-    title: 'Fraud Analysis',
-    department: 'Risk',
-    location: 'Abu Dhabi',
-    salary: '$5,000 / Month',
+    title: 'Cloud Security Architect',
+    department: 'KRXCloud',
+    location: 'Remote',
+    salary: '40-60k/year',
     description: [
-      'Experience in data analysis, risk management, or fraud detection.',
-      'Strong analytical skills and proficiency in using data analysis tools (e.g., SQL, Excel).',
-      'Excellent attention to detail and the ability to identify patterns and anomalies.',
-      'Strong communication skills and the ability to work collaboratively in a team environment.',
-      'A bachelor\'s degree in Finance, Criminal Justice, Data Science, or a related field is preferred.'
+      'Design cloud-native security solutions for major cloud providers (AWS, Azure, GCP)',
+      'Implement container security and Kubernetes protection systems',
+      'Develop cloud workload protection and data security solutions',
+      'Create automated security scanning and compliance monitoring tools',
+      'Experience with cloud security, IaC, and modern DevSecOps practices'
+    ]
+  },
+  {
+    title: 'Security Compliance Specialist',
+    department: 'KRXRisk',
+    location: 'Remote',
+    salary: '35-50k/year',
+    description: [
+      'Develop automated compliance monitoring tools for GDPR, HIPAA, and SOC 2',
+      'Create risk assessment frameworks and vulnerability management systems',
+      'Implement security metrics and benchmarking platforms',
+      'Build regulatory reporting and compliance documentation systems',
+      'Experience with GRC platforms, compliance frameworks, and security standards'
     ]
   }
 ]
@@ -101,12 +114,16 @@ export default function Careers() {
           
           <h1 className="text-7xl sm:text-8xl font-satoshi tracking-[-0.03em] leading-[1.1] sm:leading-tight mb-6">
             <span className="text-white/90 relative inline-block group">
-              Join
+              Security
               <span className="absolute bottom-0 left-0 w-0 h-px bg-white/20 group-hover:w-full transition-all duration-700" />
             </span>
             <br />
-            <span className="text-white/80">the Future</span>
+            <span className="text-white/80">Innovation</span>
           </h1>
+          <p className="text-zinc-400 text-lg max-w-3xl">
+            Join our team of security experts building the next generation of enterprise protection systems.
+            Help shape the future of digital security with KRXProtect's innovative solutions.
+          </p>
         </div>
       </div>
 
