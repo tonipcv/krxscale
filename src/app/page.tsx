@@ -51,11 +51,17 @@ export default function Home() {
                 <span className="hidden sm:inline">{language === 'pt' ? 'PT' : 'EN'}</span>
               </button>
               <Link
-                href="/careers"
-                className="text-xs tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
+                href="/blog"
+                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
               >
-                <span className="hidden sm:inline">{t('nav.careers')}</span>
-                <span className="sm:hidden">{t('nav.jobs')}</span>
+                Blog
+              </Link>
+              <Link
+                href="/careers"
+                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
+              >
+                <span className="hidden sm:inline">CAREERS</span>
+                <span className="sm:hidden text-xs">JOBS</span>
               </Link>
             </div>
           </div>
@@ -97,6 +103,84 @@ export default function Home() {
                   <ArrowRight size={14} strokeWidth={1.5} className="relative z-10 text-zinc-600 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
+            </div>
+          </div>
+
+          {/* Blog Section */}
+          <div className="py-12">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-satoshi tracking-[-0.03em] leading-tight text-zinc-800 mb-2">
+                Latest Articles
+              </h2>
+              <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em]">
+                Expert insights on cybersecurity and software infrastructure
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4">
+              {/* Google Pixel Article */}
+              <Link href="/blog/google-pixel-zero-day-vulnerability" className="block group">
+                <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
+                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1598327105666-5b89351aff97')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                  
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className="bg-red-100 text-red-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">8 MIN</span>
+                  </div>
+                  
+                  <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
+                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                      Google Pixel Zero-Day Vulnerability: What You Need to Know
+                    </span>
+                  </h3>
+                </article>
+              </Link>
+
+              {/* Git Vulnerability Article */}
+              <Link href="/blog/git-malicious-project-vulnerability" className="block group">
+                <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
+                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                  
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className="bg-red-100 text-red-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">10 MIN</span>
+                  </div>
+                  
+                  <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
+                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                      Git Malicious Project Vulnerability: How IDEs Executed Hackers' Code
+                    </span>
+                  </h3>
+                </article>
+              </Link>
+
+              {/* NDR Article */}
+              <Link href="/blog/ndr" className="block group">
+                <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
+                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                  
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className="bg-blue-100 text-blue-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">10 MIN</span>
+                  </div>
+                  
+                  <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
+                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                      Why Your Enterprise Needs Network Detection and Response (NDR)
+                    </span>
+                  </h3>
+                </article>
+              </Link>
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 text-sm text-zinc-800 hover:text-zinc-600 transition-colors"
+              >
+                <span className="font-euclidCircularB tracking-[-0.04em]">View all articles</span>
+                <ArrowRight size={14} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
 
