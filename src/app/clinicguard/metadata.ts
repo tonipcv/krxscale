@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     siteName: 'KRX',
     images: [
       {
-        url: 'https://koraxlabs.com/og.png',
+        url: 'https://koraxlabs.com/logo.ico',
         width: 1200,
         height: 630,
       },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ClinicGuard™ - Healthcare Cybersecurity & Automated Backup | KRX',
     description: 'Secure your medical practice with ClinicGuard™. GDPR & HIPAA compliant cybersecurity, automated backup, and ransomware protection for healthcare providers in the UK and Europe.',
-    images: ['https://koraxlabs.com/og.png'],
+    images: ['https://koraxlabs.com/logo.ico'],
   },
   robots: {
     index: true,

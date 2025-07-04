@@ -22,12 +22,20 @@ export const metadata: Metadata = {
     description: 'Join KRX Lab\'s security team. We\'re hiring Security Engineers, Mobile Security Developers, Cloud Security Architects, and Compliance Specialists. Remote positions available.',
     url: 'https://krxlab.com/careers',
     siteName: 'KRX Lab',
+    images: [
+      {
+        url: 'https://krxlab.com/logo.ico',
+        width: 1200,
+        height: 630,
+      },
+    ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Security Careers at KRX Lab | Join Our Team',
     description: 'Join KRX Lab\'s security team. We\'re hiring Security Engineers, Mobile Security Developers, Cloud Security Architects, and Compliance Specialists. Remote positions available.',
+    images: ['https://krxlab.com/logo.ico'],
   },
   robots: {
     index: true,
