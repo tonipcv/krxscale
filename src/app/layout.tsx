@@ -44,15 +44,21 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { 
-        url: `data:image/svg+xml,${encodeURIComponent(KRX_ICON_SVG)}`,
-        type: "image/svg+xml"
-      }
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' }
     ],
-    shortcut: `data:image/svg+xml,${encodeURIComponent(KRX_ICON_SVG)}`,
-    apple: `data:image/svg+xml,${encodeURIComponent(KRX_ICON_SVG)}`
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180' }
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#000000'
+      }
+    ]
   },
-  manifest: '/manifest.json',
+  manifest: '/site.webmanifest',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -81,32 +87,32 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'KRX Lab | AI Infrastructure',
+    title: 'KRX Lab | Software Infrastructure',
     description: 'KRX Labs designs custom software infrastructures for companies operating in fast-growing markets — where every second matters and technology needs to respond with surgical precision and strategic intent.',
     url: 'https://krxlab.com',
     siteName: 'KRX Lab',
     images: [
       {
-        url: `data:image/svg+xml,${encodeURIComponent(KRX_SOCIAL_IMAGE_SVG)}`,
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         type: 'image/svg+xml',
-      },
+      }
     ],
     locale: 'en-US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KRX Lab | AI Infrastructure',
+    title: 'KRX Lab | Software Infrastructure',
     description: 'KRX Labs designs custom software infrastructures for companies operating in fast-growing markets — where every second matters and technology needs to respond with surgical precision and strategic intent.',
-    images: [`data:image/svg+xml,${encodeURIComponent(KRX_SOCIAL_IMAGE_SVG)}`],
+    images: ['/og-image.svg'],
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
   other: {
-    'google-site-verification': 'your-google-verification-code',
+    'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
   category: 'technology',
   applicationName: 'KRX Lab',

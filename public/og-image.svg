@@ -1,9 +1,8 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="630" fill="#030303"/>
-  <text x="600" y="315" text-anchor="middle" font-family="system-ui" font-size="72" fill="white">KRX Lab</text>
-  <g transform="translate(500,265) scale(0.5)" stroke="white" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="8" y1="8" x2="24" y2="24"/>
-    <line x1="24" y1="8" x2="8" y2="24"/>
-    <line x1="16" y1="8" x2="16" y2="24"/>
+  <g transform="translate(400,215)">
+    <text x="200" y="100" font-family="Satoshi" font-size="64" fill="white" font-weight="bold" text-anchor="middle">KRX Labs</text>
+    <text x="200" y="170" font-family="Satoshi" font-size="32" fill="#888888" font-weight="normal" text-anchor="middle">Software Infrastructure</text>
   </g>
 </svg> 
