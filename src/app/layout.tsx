@@ -32,7 +32,14 @@ export const metadata: Metadata = {
     'developer positions',
     'tech opportunities',
     'Abu Dhabi jobs',
-    'remote jobs'
+    'remote jobs',
+    'cybersecurity',
+    'infrastructure security',
+    'software architecture',
+    'cloud solutions',
+    'enterprise software',
+    'secure development',
+    'tech consulting'
   ],
   authors: [{ name: 'KRX Lab', url: 'https://krxlab.com' }],
   creator: 'KRX Lab',
@@ -62,7 +69,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'KRX Lab',
+    title: 'KRX Lab | Software Infrastructure',
   },
   viewport: {
     width: 'device-width',
@@ -87,8 +94,8 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'KRX Lab | Software Infrastructure',
-    description: 'KRX Labs designs custom software infrastructures for companies operating in fast-growing markets — where every second matters and technology needs to respond with surgical precision and strategic intent.',
+    title: 'KRX Lab | Software Infrastructure & Security Solutions',
+    description: 'KRX Labs specializes in building secure, scalable software infrastructures for fast-growing companies. Expert solutions in cybersecurity, cloud architecture, and enterprise software.',
     url: 'https://krxlab.com',
     siteName: 'KRX Lab',
     images: [
@@ -104,15 +111,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KRX Lab | Software Infrastructure',
-    description: 'KRX Labs designs custom software infrastructures for companies operating in fast-growing markets — where every second matters and technology needs to respond with surgical precision and strategic intent.',
+    title: 'KRX Lab | Software Infrastructure & Security Solutions',
+    description: 'KRX Labs specializes in building secure, scalable software infrastructures for fast-growing companies. Expert solutions in cybersecurity, cloud architecture, and enterprise software.',
     images: ['/og-image.svg'],
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
   other: {
-    'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
   category: 'technology',
   applicationName: 'KRX Lab',
