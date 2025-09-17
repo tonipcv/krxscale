@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -13,6 +13,11 @@ export default function IscaPage() {
     whatsapp: '',
   });
   const [isLoading, setIsLoading] = useState(false);
+
+  // Immediate redirect to /66
+  useEffect(() => {
+    router.replace('/66');
+  }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
