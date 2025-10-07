@@ -76,27 +76,27 @@ export default function BlogPage() {
 
           {/* Featured Post */}
           <div className="mb-16 group">
-            <Link href="/blog/giftedcrook-malware-evolution" className="block">
+            <Link href="/blog/krx-labs-local-payments-global-settlement" className="block">
               <article className="relative overflow-hidden rounded-sm">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10" />
-                <div className="h-[450px] bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5')] bg-cover bg-center" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10" />
+                <div className="h-[450px] bg-emerald-700 bg-[url('https://flagcdn.com/w1280/br.png')] bg-cover bg-center" />
                 
                 <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
                   <div className="space-y-4 max-w-3xl">
                     <div className="flex items-center gap-4 text-sm">
-                      <span className="bg-white/70 text-zinc-800 px-3 py-1 font-euclidCircularB tracking-[-0.04em]">SECURITY</span>
+                      <span className="bg-white/80 text-zinc-900 px-3 py-1 font-euclidCircularB tracking-[-0.04em]">FINTECH</span>
                       <div className="flex items-center gap-1 text-white/90">
                         <Clock size={14} />
-                        <span className="font-euclidCircularB tracking-[-0.04em]">8 MIN</span>
+                        <span className="font-euclidCircularB tracking-[-0.04em]">9 MIN</span>
                       </div>
                     </div>
                     
                     <h2 className="text-3xl sm:text-4xl font-satoshi tracking-[-0.03em] leading-tight text-white group-hover:scale-[1.01] transition-transform duration-500">
-                      GIFTEDCROOK: How a Simple Password Stealer Became a Geopolitical Spy Tool
+                      KRX Labs: Bridging Global Ambition with Local Payment Realities
                     </h2>
                     
                     <p className="text-white/90 font-euclidCircularB tracking-[-0.04em] max-w-2xl">
-                      GIFTEDCROOK shifted from stealing passwords to full-scale espionage against Ukraine. Learn how it works and what it reveals about modern cyber threats.
+                      Accept local payments like Pix and settle in USD with full compliance. How KRX Labs connects local rails to global liquidity.
                     </p>
 
                     <div className="inline-flex items-center gap-2 text-white font-euclidCircularB tracking-[-0.04em] mt-4 group-hover:translate-x-1 transition-transform duration-300">
@@ -116,6 +116,33 @@ export default function BlogPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
+              <Link href="/blog/krx-labs-local-payments-global-settlement" className="block group">
+                <article className="h-full space-y-4 bg-zinc-50 p-6 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
+                  <div className="h-48 mb-4 bg-emerald-600 bg-[url('https://flagcdn.com/w640/br.png')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                  
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="bg-emerald-100 text-emerald-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">FINTECH</span>
+                    <span className="w-1 h-1 rounded-full bg-zinc-400" />
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">9 MIN</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-satoshi tracking-[-0.03em] leading-tight">
+                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                      KRX Labs: Bridging Global Ambition with Local Payment Realities
+                    </span>
+                  </h3>
+                  
+                  <p className="text-zinc-600 font-euclidCircularB tracking-[-0.04em] line-clamp-3">
+                    Enable local payment acceptance like Pix and settle in USD with full compliance. How KRX Labs connects local rails to global liquidity.
+                  </p>
+
+                  <div className="inline-flex items-center gap-2 text-sm text-zinc-600 group-hover:text-zinc-800 transition-colors">
+                    <span className="font-euclidCircularB tracking-[-0.04em]">READ MORE</span>
+                    <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </article>
+              </Link>
+
               <Link href="/blog/blind-eagle-south-america-attacks" className="block group">
                 <article className="h-full space-y-4 bg-zinc-50 p-6 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
                   <div className="h-48 mb-4 bg-[url('https://images.unsplash.com/photo-1614064641938-3bbee52942c7')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />

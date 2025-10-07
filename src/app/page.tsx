@@ -117,7 +117,24 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-4 gap-4">
+              {/* KRX Labs Local Payments Article */}
+              <Link href="/blog/krx-labs-local-payments-global-settlement" className="block group">
+                <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
+                  <div className="h-32 mb-2 bg-emerald-600 bg-[url('https://flagcdn.com/w640/br.png')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                  
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className="bg-emerald-100 text-emerald-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">FINTECH</span>
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">9 MIN</span>
+                  </div>
+                  
+                  <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
+                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                      KRX Labs: Bridging Global Ambition with Local Payment Realities
+                    </span>
+                  </h3>
+                </article>
+              </Link>
               {/* Google Pixel Article */}
               <Link href="/blog/google-pixel-zero-day-vulnerability" className="block group">
                 <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
