@@ -1,11 +1,97 @@
-'use client'
-
 import Link from 'next/link'
+import Script from 'next/script'
+import type { Metadata } from 'next'
 import { ArrowLeft, Globe, Banknote, Shield, Lock, BarChart3 } from 'lucide-react'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const articlePath = '/blog/krx-labs-local-payments-global-settlement'
+const articleUrl = `${siteUrl}${articlePath}`
+const ogImage = 'https://flagcdn.com/w1200/br.png'
+
+export const metadata: Metadata = {
+  title: 'KRX Labs: Bridging Global Ambition with Local Payment Realities',
+  description:
+    'Enable local acceptance (Pix, recurring Pix, local credit) and settle in USD with full compliance. How KRX Labs connects local rails to global liquidity with orchestration, FX, and risk-by-design.',
+  keywords: [
+    'KRX Labs',
+    'Pix',
+    'Pix Automático',
+    'Open Finance',
+    'Open Banking',
+    'Local Payments',
+    'Cross-border',
+    'Merchant of Record',
+    'FX',
+    'Hedging',
+    'Brazil payments',
+    'BRL to USD',
+    'Global settlement',
+  ],
+  alternates: {
+    canonical: articlePath,
+  },
+  openGraph: {
+    type: 'article',
+    url: articleUrl,
+    title: 'KRX Labs: Bridging Global Ambition with Local Payment Realities',
+    description:
+      'Local acceptance, global settlement: accept Pix and other local rails while receiving in USD with compliance and rapid settlement.',
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Brazil flag representing local payments with global settlement',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'KRX Labs: Bridging Global Ambition with Local Payment Realities',
+    description:
+      'Local acceptance, global settlement: accept Pix and other local rails while receiving in USD with compliance and rapid settlement.',
+    images: [ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: 'KRX Labs' }],
+}
 
 export default function KRXLabsLocalPaymentsPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Article Schema */}
+      <Script id="ld-json-krx-labs-local-payments" type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'KRX Labs: Bridging Global Ambition with Local Payment Realities',
+          description:
+            'Enable local acceptance (Pix, recurring Pix, local credit) and settle in USD with full compliance. How KRX Labs connects local rails to global liquidity with orchestration, FX, and risk-by-design.',
+          author: {
+            '@type': 'Organization',
+            name: 'KRX Labs',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'KRX Labs',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${siteUrl}/apple-touch-icon.png`,
+            },
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': articleUrl,
+          },
+          image: [ogImage],
+          datePublished: '2025-10-07',
+          dateModified: '2025-10-07',
+          url: articleUrl,
+        })}
+      </Script>
       {/* Navigation */}
       <nav className="fixed w-full top-0 border-b border-zinc-200 backdrop-blur-md z-40 transition-all duration-300 bg-white/80">
         <div className="max-w-7xl mx-auto px-6 py-6">
@@ -108,10 +194,7 @@ export default function KRXLabsLocalPaymentsPage() {
 
             <h3 className="text-zinc-900 text-2xl mb-4">1.2 The scale of Pix — and the cost of ignoring it</h3>
             <div className="not-prose space-y-8 mb-8">
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <Shield size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Pix Scale & Growth</h3>
                   <ul className="list-none m-0 space-y-2">
@@ -128,10 +211,7 @@ export default function KRXLabsLocalPaymentsPage() {
 
             <h3 className="text-zinc-900 text-2xl mb-4">1.3 The size of the cross-border payments opportunity</h3>
             <div className="not-prose space-y-8 mb-8">
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <BarChart3 size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Cross-Border Opportunity</h3>
                   <ul className="list-none m-0 space-y-2">
@@ -150,10 +230,7 @@ export default function KRXLabsLocalPaymentsPage() {
               Executives outside payments often face confusing terminology. Here are definitions framing KRX Labs’ model in clear business language:
             </p>
             <div className="not-prose space-y-8 mb-12">
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <Globe size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Key Payments Concepts</h3>
                   <ul className="list-none m-0 space-y-2">
@@ -174,10 +251,7 @@ export default function KRXLabsLocalPaymentsPage() {
               KRX Labs operates a “local in, global out” architecture. Integrate once to orchestrate:
             </p>
             <div className="not-prose space-y-8 mb-8">
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <Globe size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">The KRX Labs Model</h3>
                   <ul className="list-none m-0 space-y-2">
@@ -192,10 +266,7 @@ export default function KRXLabsLocalPaymentsPage() {
 
             <h3 className="text-zinc-900 text-2xl mb-4">3.2 Liquidity and FX orchestration</h3>
             <div className="not-prose space-y-8 mb-8">
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <Banknote size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Local settlement accounts</h3>
                   <p className="text-zinc-600 font-euclidCircularB m-0 leading-relaxed">
@@ -203,10 +274,7 @@ export default function KRXLabsLocalPaymentsPage() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <BarChart3 size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Dynamic FX engines</h3>
                   <p className="text-zinc-600 font-euclidCircularB m-0 leading-relaxed">
@@ -218,10 +286,7 @@ export default function KRXLabsLocalPaymentsPage() {
 
             <h3 className="text-zinc-900 text-2xl mb-4">3.3 Compliance and security by design</h3>
             <div className="not-prose space-y-8 mb-8">
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <Shield size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">KYC / AML controls</h3>
                   <p className="text-zinc-600 font-euclidCircularB m-0 leading-relaxed">
@@ -229,10 +294,7 @@ export default function KRXLabsLocalPaymentsPage() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <Lock size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Risk & audit</h3>
                   <p className="text-zinc-600 font-euclidCircularB m-0 leading-relaxed">
@@ -244,10 +306,7 @@ export default function KRXLabsLocalPaymentsPage() {
 
             <h3 className="text-zinc-900 text-2xl mb-4">3.4 Revenue model and scalability</h3>
             <div className="not-prose space-y-8 mb-12">
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <BarChart3 size={28} className="text-zinc-700" />
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
                   <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Revenue & Scalability</h3>
                   <ul className="list-none m-0 space-y-2">
@@ -262,55 +321,15 @@ export default function KRXLabsLocalPaymentsPage() {
 
             <h2 className="text-zinc-900 text-3xl mb-6">4. Competitive edge and barriers to entry</h2>
             <div className="not-prose space-y-8 mb-12">
-              <div className="flex items-start gap-6 bg-zinc-50 p-8 rounded-lg">
-                <div className="bg-zinc-200 p-3 rounded-lg">
-                  <Shield size={28} className="text-zinc-700" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Competitive Advantages</h3>
-                  <ul className="list-none m-0 space-y-2">
-                    <li className="flex items-start gap-3">
-                      <div className="bg-green-400 p-1.5 rounded-full mt-1">
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-zinc-600"><strong>Local experience without local presence:</strong> native checkout and UX without incorporating locally.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="bg-green-400 p-1.5 rounded-full mt-1">
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-zinc-600"><strong>Predictability and transparency:</strong> clear pricing and settlement timing; no hidden FX spreads.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="bg-green-400 p-1.5 rounded-full mt-1">
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-zinc-600"><strong>Compliance as a moat:</strong> regulatory alignment and continuous monitoring for enterprise trust.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="bg-green-400 p-1.5 rounded-full mt-1">
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-zinc-600"><strong>Scale economics:</strong> multi-market pooling reduces FX costs and compounds pricing advantages.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="bg-green-400 p-1.5 rounded-full mt-1">
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-zinc-600"><strong>Replication barriers:</strong> licenses, banking, and regulatory frameworks require capital and time.</span>
-                    </li>
-                  </ul>
-                </div>
+              <div className="bg-zinc-50 p-8 rounded-lg">
+                <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Competitive Advantages</h3>
+                <ul className="list-disc pl-6 text-zinc-700 space-y-1">
+                  <li><strong>Local experience without local presence:</strong> native checkout and UX without incorporating locally.</li>
+                  <li><strong>Predictability and transparency:</strong> clear pricing and settlement timing; no hidden FX spreads.</li>
+                  <li><strong>Compliance as a moat:</strong> regulatory alignment and continuous monitoring for enterprise trust.</li>
+                  <li><strong>Scale economics:</strong> multi-market pooling reduces FX costs and compounds pricing advantages.</li>
+                  <li><strong>Replication barriers:</strong> licenses, banking, and regulatory frameworks require capital and time.</li>
+                </ul>
               </div>
             </div>
 
