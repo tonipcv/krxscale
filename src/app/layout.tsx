@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import './globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk } from 'next/font/google';
 import { KRX_ICON_SVG, KRX_SOCIAL_IMAGE_SVG } from '@/constants/brand'
 import Script from "next/script"
@@ -71,11 +71,6 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'KRX Lab | Software Infrastructure',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
   robots: {
     index: true,
     follow: true,
@@ -126,6 +121,12 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   assets: ['/careers'],
   metadataBase: new URL('https://krxlab.com')
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
