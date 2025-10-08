@@ -96,7 +96,7 @@ export default function KRXLabsLocalPaymentsPage() {
               Emerging markets operate through a mosaic of local payment rails — instant transfers, debit pulls, local credit installments, e-wallets, and domestic digital transfers.
               To access them, a foreign company typically needs:
             </p>
-            <ul className="mb-8">
+            <ul className="mb-8 list-disc pl-6 text-zinc-700">
               <li>A local legal entity</li>
               <li>Banking partnerships and local KYC/AML processes</li>
               <li>Currency conversion and remittance operations</li>
