@@ -1,19 +1,28 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowRight, Globe } from "lucide-react"
 import Link from 'next/link'
 import ContactForm from './components/ContactForm'
 import { useLanguage } from './components/LanguageProvider'
+import { useSearchParams } from 'next/navigation'
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false)
   const { t, language, setLanguage } = useLanguage();
+  const searchParams = useSearchParams();
 
   const toggleLanguage = () => {
     setLanguage(language === 'pt' ? 'en' : 'pt');
   };
+
+  useEffect(() => {
+    if (searchParams.get('contact') === 'open') {
+      setShowForm(true)
+    }
+  }, [searchParams])
 
   return (
     <div className="min-h-screen bg-white text-zinc-800 overflow-hidden">

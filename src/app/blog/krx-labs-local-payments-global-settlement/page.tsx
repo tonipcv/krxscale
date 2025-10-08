@@ -176,8 +176,8 @@ export default function KRXLabsLocalPaymentsPage() {
               This article explains the context, technical underpinnings, and strategic impact of the KRX Labs model — and why it’s poised to redefine how global enterprises reach emerging markets.
             </p>
 
-            <h2 className="text-zinc-900 text-3xl mb-6">1. The harsh reality: why global firms fail in emerging markets</h2>
-            <h3 className="text-zinc-900 text-2xl mb-4">1.1 The invisible barrier of local payment fragmentation</h3>
+            <h2 className="text-zinc-900 text-3xl mb-6">The harsh reality: why global firms fail in emerging markets</h2>
+            <h3 className="text-zinc-900 text-2xl mb-4">The invisible barrier of local payment fragmentation</h3>
             <p className="text-zinc-600 leading-relaxed mb-4">
               Emerging markets operate through a mosaic of local payment rails — instant transfers, debit pulls, local credit installments, e-wallets, and domestic digital transfers.
               To access them, a foreign company typically needs:
@@ -192,7 +192,7 @@ export default function KRXLabsLocalPaymentsPage() {
               Most global firms won’t invest this complexity for a single market, defaulting to international cards or PayPal — methods that cover only a fraction of consumers and convert poorly.
             </p>
 
-            <h3 className="text-zinc-900 text-2xl mb-4">1.2 The scale of Pix — and the cost of ignoring it</h3>
+            <h3 className="text-zinc-900 text-2xl mb-4">The scale of Pix — and the cost of ignoring it</h3>
             <div className="not-prose space-y-8 mb-8">
               <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
@@ -209,7 +209,7 @@ export default function KRXLabsLocalPaymentsPage() {
             </div>
             <p className="text-zinc-600 leading-relaxed mb-10">Pix is now Brazil’s dominant rail, surpassing cards in volume. Ignoring it excludes enterprises from a dynamic consumer market.</p>
 
-            <h3 className="text-zinc-900 text-2xl mb-4">1.3 The size of the cross-border payments opportunity</h3>
+            <h3 className="text-zinc-900 text-2xl mb-4">The size of the cross-border payments opportunity</h3>
             <div className="not-prose space-y-8 mb-8">
               <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
@@ -225,7 +225,7 @@ export default function KRXLabsLocalPaymentsPage() {
             </div>
             <p className="text-zinc-600 leading-relaxed mb-12">The world needs infrastructures that connect local acceptance with international settlement — efficiently and securely.</p>
 
-            <h2 className="text-zinc-900 text-3xl mb-6">2. Key concepts — a shared language for global stakeholders</h2>
+            <h2 className="text-zinc-900 text-3xl mb-6">Key concepts — a shared language for global stakeholders</h2>
             <p className="text-zinc-600 leading-relaxed mb-4">
               Executives outside payments often face confusing terminology. Here are definitions framing KRX Labs’ model in clear business language:
             </p>
@@ -245,8 +245,8 @@ export default function KRXLabsLocalPaymentsPage() {
               </div>
             </div>
 
-            <h2 className="text-zinc-900 text-3xl mb-6">3. The KRX Labs architecture: Local acceptance, global settlement</h2>
-            <h3 className="text-zinc-900 text-2xl mb-4">3.1 The model</h3>
+            <h2 className="text-zinc-900 text-3xl mb-6">The KRX Labs architecture: Local acceptance, global settlement</h2>
+            <h3 className="text-zinc-900 text-2xl mb-4">The model</h3>
             <p className="text-zinc-600 leading-relaxed mb-6">
               KRX Labs operates a “local in, global out” architecture. Integrate once to orchestrate:
             </p>
@@ -264,7 +264,7 @@ export default function KRXLabsLocalPaymentsPage() {
               </div>
             </div>
 
-            <h3 className="text-zinc-900 text-2xl mb-4">3.2 Liquidity and FX orchestration</h3>
+            <h3 className="text-zinc-900 text-2xl mb-4">Liquidity and FX orchestration</h3>
             <div className="not-prose space-y-8 mb-8">
               <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
@@ -284,7 +284,7 @@ export default function KRXLabsLocalPaymentsPage() {
               </div>
             </div>
 
-            <h3 className="text-zinc-900 text-2xl mb-4">3.3 Compliance and security by design</h3>
+            <h3 className="text-zinc-900 text-2xl mb-4">Compliance and security by design</h3>
             <div className="not-prose space-y-8 mb-8">
               <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
@@ -304,7 +304,7 @@ export default function KRXLabsLocalPaymentsPage() {
               </div>
             </div>
 
-            <h3 className="text-zinc-900 text-2xl mb-4">3.4 Revenue model and scalability</h3>
+            <h3 className="text-zinc-900 text-2xl mb-4">Revenue model and scalability</h3>
             <div className="not-prose space-y-8 mb-12">
               <div className="bg-zinc-50 p-8 rounded-lg">
                 <div>
@@ -319,7 +319,7 @@ export default function KRXLabsLocalPaymentsPage() {
               </div>
             </div>
 
-            <h2 className="text-zinc-900 text-3xl mb-6">4. Competitive edge and barriers to entry</h2>
+            <h2 className="text-zinc-900 text-3xl mb-6">Competitive edge and barriers to entry</h2>
             <div className="not-prose space-y-8 mb-12">
               <div className="bg-zinc-50 p-8 rounded-lg">
                 <h3 className="text-xl font-satoshi text-zinc-900 mb-3">Competitive Advantages</h3>
@@ -333,7 +333,7 @@ export default function KRXLabsLocalPaymentsPage() {
               </div>
             </div>
 
-            <h2 className="text-zinc-900 text-3xl mb-6">5. The strategic narrative: the future of global expansion</h2>
+            <h2 className="text-zinc-900 text-3xl mb-6">The strategic narrative: the future of global expansion</h2>
             <p className="text-zinc-600 leading-relaxed mb-12">
               Ignoring local payment ecosystems is a strategic failure. Brazil’s Pix — processing 6B+ transactions monthly — is a blueprint for Global South rails. With Pix Automático, recurring models can finally reach segments excluded from cards. Meanwhile, cross-border payments expand from USD 212B to 320B+ by 2030. KRX Labs — accept locally, settle globally — aligns with this macro shift.
             </p>
@@ -372,6 +372,16 @@ export default function KRXLabsLocalPaymentsPage() {
                   KRX Labs integrates KYC/AML controls at onboarding and per transaction, with tokenization, end-to-end encryption, and alignment with ISO 27001, PCI DSS, and local central bank requirements.
                 </p>
               </div>
+            </div>
+
+            {/* CTA: Open Contact Modal at page bottom */}
+            <div className="not-prose mt-12">
+              <a
+                href="/?contact=open"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-euclidCircularB tracking-[-0.04em] bg-zinc-900 text-white hover:bg-zinc-800 border border-zinc-900 transition-colors"
+              >
+                Talk to KRX Labs
+              </a>
             </div>
           </div>
         </article>
