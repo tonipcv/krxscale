@@ -89,10 +89,10 @@ export default function Home() {
                 </button>
                 
                 <Link
-                  href="/66"
+                  href="/scale"
                   className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden border border-zinc-300 hover:bg-zinc-100 transition-all duration-300 rounded-full"
                 >
-                  <span className="relative z-10 text-zinc-800">Explore KRXProtect</span>
+                  <span className="relative z-10 text-zinc-800">Explore KRX Scale</span>
                   <ArrowRight size={14} strokeWidth={1.5} className="relative z-10 text-zinc-600 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

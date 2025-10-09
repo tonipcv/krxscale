@@ -62,8 +62,8 @@ export default function ContactForm({ onClose }: ContactFormProps) {
     <div className="fixed inset-0 bg-black/90 flex items-start sm:items-center justify-center p-0 sm:p-4 z-50 backdrop-blur-sm animate-fadeIn overflow-y-auto">
       <Toaster position="top-center" />
       
-      <div className="bg-[#f5efe7] w-full h-full sm:h-auto sm:max-w-xl sm:rounded-lg border-y sm:border border-zinc-200 relative animate-slideUp">
-        <div className="flex items-center gap-3 p-4 border-b border-zinc-200">
+      <div className="bg-zinc-900 w-full h-full sm:h-auto sm:max-w-xl sm:rounded-lg border-y sm:border border-zinc-800 relative animate-slideUp">
+        <div className="flex items-center gap-3 p-4 border-b border-zinc-800">
           <svg
             width="20"
             height="20"
@@ -71,7 +71,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g stroke="#111111" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
+            <g stroke="#ffffff" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
               <line x1="128" y1="128" x2="256" y2="256" />
               <line x1="256" y1="256" x2="384" y2="128" />
               <line x1="256" y1="256" x2="128" y2="384" />
@@ -79,12 +79,12 @@ export default function ContactForm({ onClose }: ContactFormProps) {
               <line x1="256" y1="128" x2="256" y2="384" />
             </g>
           </svg>
-          <span className="text-sm tracking-[-0.03em] font-satoshi text-zinc-800">Precision-built technology</span>
+          <span className="text-sm tracking-[-0.03em] font-satoshi text-zinc-100">Precision-built technology</span>
         </div>
 
         <button 
           onClick={onClose}
-          className="absolute right-4 top-4 text-zinc-400 hover:text-zinc-800 transition-colors"
+          className="absolute right-4 top-4 text-zinc-400 hover:text-zinc-200 transition-colors"
         >
           <X size={20} className="stroke-[1.5]" />
         </button>
@@ -92,8 +92,8 @@ export default function ContactForm({ onClose }: ContactFormProps) {
         <div className="p-4 sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <User size={14} className="text-zinc-500" />
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <User size={14} className="text-zinc-400" />
                 Name
               </label>
               <input
@@ -102,13 +102,13 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
-                className="w-full bg-zinc-100 border border-zinc-200 p-2.5 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-400"
+                className="w-full bg-zinc-800 border border-zinc-700 p-2.5 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <Mail size={14} className="text-zinc-500" />
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Mail size={14} className="text-zinc-400" />
                 Email
               </label>
               <input
@@ -117,13 +117,13 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
-                className="w-full bg-zinc-100 border border-zinc-200 p-2.5 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-400"
+                className="w-full bg-zinc-800 border border-zinc-700 p-2.5 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <Phone size={14} className="text-zinc-500" />
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Phone size={14} className="text-zinc-400" />
                 Phone
               </label>
               <input
@@ -132,13 +132,13 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 required
-                className="w-full bg-zinc-100 border border-zinc-200 p-2.5 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-400"
+                className="w-full bg-zinc-800 border border-zinc-700 p-2.5 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <Building size={14} className="text-zinc-500" />
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Building size={14} className="text-zinc-400" />
                 Industry
               </label>
               <div className="relative">
@@ -147,7 +147,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                   value={formData.sector}
                   onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
                   required
-                  className="w-full bg-zinc-100 border border-zinc-200 p-2.5 pr-8 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-400 appearance-none"
+                  className="w-full bg-zinc-800 border border-zinc-700 p-2.5 pr-8 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
                 >
                   <option value="">Select</option>
                   <option value="Technology">Technology</option>
@@ -159,13 +159,13 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                   <option value="Services">Services</option>
                   <option value="Other">Other</option>
                 </select>
-                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none" />
+                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" />
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <Users size={14} className="text-zinc-500" />
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Users size={14} className="text-zinc-400" />
                 Number of employees
               </label>
               <div className="relative">
@@ -174,7 +174,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                   value={formData.employees}
                   onChange={(e) => setFormData({ ...formData, employees: e.target.value })}
                   required
-                  className="w-full bg-zinc-100 border border-zinc-200 p-2.5 pr-8 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-400 appearance-none"
+                  className="w-full bg-zinc-800 border border-zinc-700 p-2.5 pr-8 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
                 >
                   <option value="">Select</option>
                   <option value="1-10">1-10 employees</option>
@@ -184,13 +184,13 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                   <option value="501-1000">501-1000 employees</option>
                   <option value="1001+">More than 1000 employees</option>
                 </select>
-                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none" />
+                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" />
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <DollarSign size={14} className="text-zinc-500" />
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <DollarSign size={14} className="text-zinc-400" />
                 Annual Revenue
               </label>
               <div className="relative">
@@ -199,7 +199,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                   value={formData.arr}
                   onChange={(e) => setFormData({ ...formData, arr: e.target.value })}
                   required
-                  className="w-full bg-zinc-100 border border-zinc-200 p-2.5 pr-8 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-400 appearance-none"
+                  className="w-full bg-zinc-800 border border-zinc-700 p-2.5 pr-8 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
                 >
                   <option value="">Select</option>
                   <option value="Less than $100k">Less than $100k</option>
@@ -215,15 +215,15 @@ export default function ContactForm({ onClose }: ContactFormProps) {
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <FileText size={14} className="text-zinc-500" />
+              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <FileText size={14} className="text-zinc-400" />
                 What are your needs?
               </label>
               <textarea
                 name="needs"
                 value={formData.needs}
                 onChange={(e) => setFormData({ ...formData, needs: e.target.value })}
-                className="w-full bg-zinc-100 border border-zinc-200 p-2.5 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-400 h-24 resize-none"
+                className="w-full bg-zinc-800 border border-zinc-700 p-2.5 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 h-24 resize-none"
                 required
               />
             </div>
