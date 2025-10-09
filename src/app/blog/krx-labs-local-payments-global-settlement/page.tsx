@@ -61,7 +61,7 @@ export const metadata: Metadata = {
 
 export default function KRXLabsLocalPaymentsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f5efe7]">
       {/* JSON-LD Article Schema */}
       <Script id="ld-json-krx-labs-local-payments" type="application/ld+json">
         {JSON.stringify({
@@ -93,27 +93,18 @@ export default function KRXLabsLocalPaymentsPage() {
         })}
       </Script>
       {/* Navigation */}
-      <nav className="fixed w-full top-0 border-b border-zinc-200 backdrop-blur-md z-40 transition-all duration-300 bg-white/80">
+      <nav className="fixed w-full top-0 border-b border-zinc-200 backdrop-blur-md z-40 transition-all duration-300 bg-[#f5efe7]/80">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3 group">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 512 512"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="group-hover:scale-110 transition-transform duration-300"
-              >
-                <g stroke="#111111" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="128" y1="128" x2="256" y2="256" />
-                  <line x1="256" y1="256" x2="384" y2="128" />
-                  <line x1="256" y1="256" x2="128" y2="384" />
-                  <line x1="256" y1="256" x2="384" y2="384" />
-                  <line x1="256" y1="128" x2="256" y2="384" />
-                </g>
-              </svg>
-              <span className="text-xl tracking-[-0.03em] font-satoshi text-zinc-900">KRX</span>
+              <img 
+                src="/logo.png" 
+                alt="KRX Labs Logo" 
+                width={48} 
+                height={48} 
+                className="w-6 h-6 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform duration-300 invert"
+              />
+              <span className="text-base sm:text-xl tracking-[-0.03em] font-satoshi text-zinc-900">KRX</span>
             </Link>
 
             <div className="flex items-center gap-6">

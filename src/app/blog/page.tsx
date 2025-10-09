@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-white text-zinc-800">
+    <div className="min-h-screen bg-[#f5efe7] text-zinc-800">
       {/* Navbar */}
-      <nav className="fixed w-full top-0 border-b border-zinc-200 backdrop-blur-md z-40 transition-all duration-300 bg-white/80">
+      <nav className="fixed w-full top-0 border-b border-zinc-200 backdrop-blur-md z-40 transition-all duration-300 bg-[#f5efe7]/80">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -17,9 +17,9 @@ export default function BlogPage() {
                 alt="KRX Labs Logo" 
                 width={48} 
                 height={48} 
-                className="group-hover:scale-110 transition-transform duration-300 invert"
+                className="w-6 h-6 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform duration-300 invert"
               />
-              <span className="text-xl tracking-[-0.03em] font-satoshi">KRX</span>
+              <span className="text-base sm:text-xl tracking-[-0.03em] font-satoshi">KRX</span>
             </Link>
 
             {/* Right Side Navigation */}

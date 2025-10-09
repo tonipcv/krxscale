@@ -24,9 +24,9 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white text-zinc-800 overflow-hidden">
+    <div className="min-h-screen bg-[#f5efe7] text-zinc-800 overflow-hidden">
       {/* Navbar */}
-      <nav className="fixed w-full top-0 backdrop-blur-md z-40 transition-all duration-300">
+      <nav className="fixed w-full top-0 backdrop-blur-md bg-[#f5efe7]/80 z-40 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -36,9 +36,9 @@ export default function Home() {
                 alt="KRX Labs Logo" 
                 width={48} 
                 height={48} 
-                className="group-hover:scale-110 transition-transform duration-300 invert"
+                className="w-6 h-6 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform duration-300 invert"
               />
-              <span className="text-xl tracking-[-0.03em] font-satoshi">KRX</span>
+              <span className="text-base sm:text-xl tracking-[-0.03em] font-satoshi">KRX</span>
             </Link>
 
             {/* Right Side Navigation */}
@@ -82,7 +82,7 @@ export default function Home() {
               <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
                 <button
                   onClick={() => setShowForm(true)}
-                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-zinc-800 hover:bg-zinc-900 border border-zinc-900 transition-all duration-300"
+                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-zinc-800 hover:bg-zinc-900 border border-zinc-900 transition-all duration-300 rounded-full"
                 >
                   <span className="relative z-10 text-white/90">{t('home.applyNow')}</span>
                   <ArrowRight size={14} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:translate-x-1 transition-transform" />
@@ -90,7 +90,7 @@ export default function Home() {
                 
                 <Link
                   href="/66"
-                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden border border-zinc-300 hover:bg-zinc-100 transition-all duration-300"
+                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden border border-zinc-300 hover:bg-zinc-100 transition-all duration-300 rounded-full"
                 >
                   <span className="relative z-10 text-zinc-800">Explore KRXProtect</span>
                   <ArrowRight size={14} strokeWidth={1.5} className="relative z-10 text-zinc-600 group-hover:translate-x-1 transition-transform" />
@@ -113,16 +113,16 @@ export default function Home() {
             <div className="grid md:grid-cols-4 gap-4">
               {/* KRX Labs Local Payments Article */}
               <Link href="/blog/krx-labs-local-payments-global-settlement" className="block group">
-                <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
-                  <div className="h-32 mb-2 bg-emerald-600 bg-[url('https://flagcdn.com/w640/br.png')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                <article className="h-full space-y-2 bg-zinc-900 p-4 border border-zinc-800 transition-all duration-300 hover:bg-zinc-800 relative overflow-hidden rounded-xl">
+                  <div className="h-32 mb-2 bg-emerald-600 bg-[url('https://flagcdn.com/w640/br.png')] bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" />
                   
                   <div className="flex items-center gap-2 text-xs">
                     <span className="bg-emerald-100 text-emerald-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">FINTECH</span>
-                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">9 MIN</span>
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-400">9 MIN</span>
                   </div>
                   
                   <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
-                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                    <span className="text-zinc-200 relative inline-block group-hover:text-white transition-colors">
                       KRX Labs: Bridging Global Ambition with Local Payment Realities
                     </span>
                   </h3>
@@ -130,16 +130,16 @@ export default function Home() {
               </Link>
               {/* Google Pixel Article */}
               <Link href="/blog/google-pixel-zero-day-vulnerability" className="block group">
-                <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
-                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1598327105666-5b89351aff97')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                <article className="h-full space-y-2 bg-zinc-900 p-4 border border-zinc-800 transition-all duration-300 hover:bg-zinc-800 relative overflow-hidden rounded-xl">
+                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1598327105666-5b89351aff97')] bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" />
                   
                   <div className="flex items-center gap-2 text-xs">
                     <span className="bg-red-100 text-red-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
-                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">8 MIN</span>
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-400">8 MIN</span>
                   </div>
                   
                   <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
-                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                    <span className="text-zinc-200 relative inline-block group-hover:text-white transition-colors">
                       Google Pixel Zero-Day Vulnerability: What You Need to Know
                     </span>
                   </h3>
@@ -148,16 +148,16 @@ export default function Home() {
 
               {/* Git Vulnerability Article */}
               <Link href="/blog/git-malicious-project-vulnerability" className="block group">
-                <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
-                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                <article className="h-full space-y-2 bg-zinc-900 p-4 border border-zinc-800 transition-all duration-300 hover:bg-zinc-800 relative overflow-hidden rounded-xl">
+                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb')] bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" />
                   
                   <div className="flex items-center gap-2 text-xs">
                     <span className="bg-red-100 text-red-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
-                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">10 MIN</span>
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-400">10 MIN</span>
                   </div>
                   
                   <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
-                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                    <span className="text-zinc-200 relative inline-block group-hover:text-white transition-colors">
                       Git Malicious Project Vulnerability: How IDEs Executed Hackers' Code
                     </span>
                   </h3>
@@ -166,16 +166,16 @@ export default function Home() {
 
               {/* NDR Article */}
               <Link href="/blog/ndr" className="block group">
-                <article className="h-full space-y-2 bg-zinc-50 p-4 border border-zinc-200 transition-all duration-300 hover:bg-zinc-100 relative overflow-hidden rounded-sm">
-                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31')] bg-cover bg-center rounded-sm group-hover:scale-105 transition-transform duration-500" />
+                <article className="h-full space-y-2 bg-zinc-900 p-4 border border-zinc-800 transition-all duration-300 hover:bg-zinc-800 relative overflow-hidden rounded-xl">
+                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31')] bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" />
                   
                   <div className="flex items-center gap-2 text-xs">
                     <span className="bg-blue-100 text-blue-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
-                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-500">10 MIN</span>
+                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-400">10 MIN</span>
                   </div>
                   
                   <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
-                    <span className="text-zinc-800 relative inline-block group-hover:text-zinc-900 transition-colors">
+                    <span className="text-zinc-200 relative inline-block group-hover:text-white transition-colors">
                       Why Your Enterprise Needs Network Detection and Response (NDR)
                     </span>
                   </h3>
@@ -186,7 +186,7 @@ export default function Home() {
             <div className="text-center mt-8">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-sm text-zinc-800 hover:text-zinc-600 transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-zinc-800 hover:text-zinc-600 transition-colors px-4 py-2 rounded-full border border-zinc-300 hover:bg-zinc-100"
               >
                 <span className="font-euclidCircularB tracking-[-0.04em]">View all articles</span>
                 <ArrowRight size={14} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
