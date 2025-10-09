@@ -68,13 +68,13 @@ export default function Home() {
             <div className="text-center space-y-6 sm:space-y-8 relative">
               <div className="absolute inset-0 bg-zinc-100 blur-3xl -z-10" />
               <div>
-                <h1 className="text-5xl sm:text-7xl md:text-8xl font-satoshi tracking-[-0.03em] leading-[1.1] sm:leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-satoshi tracking-[-0.03em] leading-[1.1] sm:leading-tight">
                   <span className="bg-gradient-to-r from-zinc-800/95 to-zinc-600/80 text-transparent bg-clip-text">
-                    {t('home.building')}
+                    Local payments, global precision
                   </span>
                 </h1>
                 <p className="mt-6 sm:mt-8 text-zinc-600 text-sm sm:text-base md:text-lg font-euclidCircularB tracking-[-0.04em] max-w-3xl mx-auto px-2">
-                  {t('home.description')}
+                  KRX Labs enables global companies to accept Pix and local payment methods across emerging markets — without opening local entities or managing complex operations. Boost revenue, reduce overhead, and connect to global liquidity through one compliant and scalable infrastructure.
                 </p>
               </div>
 
@@ -99,6 +99,55 @@ export default function Home() {
             </div>
           </div>
 
+          {/* How it works (inline, light theme) */}
+          <section className="py-16 sm:py-20">
+            <div className="max-w-5xl mx-auto px-5">
+              <div className="text-center space-y-3 mb-10">
+                <h2 className="text-2xl sm:text-3xl font-satoshi tracking-[-0.03em] text-zinc-800">How it works</h2>
+                <p className="text-sm sm:text-base text-zinc-600 font-euclidCircularB tracking-[-0.04em] max-w-2xl mx-auto">
+                  Expanding into new markets is complex. KRX Scale turns local acceptance into global liquidity through one flow.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <article className="rounded-xl bg-white border border-zinc-200 p-5 sm:p-6">
+                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-800">Integrate</h3>
+                  <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] mt-1.5">
+                    Connect once to KRX Scale with modern APIs and dashboards.
+                  </p>
+                </article>
+                <article className="rounded-xl bg-white border border-zinc-200 p-5 sm:p-6">
+                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-800">Collect</h3>
+                  <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] mt-1.5">
+                    Accept Pix and local methods with instant confirmation.
+                  </p>
+                </article>
+                <article className="rounded-xl bg-white border border-zinc-200 p-5 sm:p-6">
+                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-800">Settle</h3>
+                  <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] mt-1.5">
+                    Convert local currencies and settle in USD with compliance.
+                  </p>
+                </article>
+                <article className="rounded-xl bg-white border border-zinc-200 p-5 sm:p-6">
+                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-800">Scale</h3>
+                  <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] mt-1.5">
+                    Expand to new markets and optimize payouts programmatically.
+                  </p>
+                </article>
+              </div>
+
+              <div className="flex justify-center mt-8">
+                <Link
+                  href="/scale"
+                  className="inline-flex items-center gap-2 text-sm text-zinc-800 hover:text-zinc-600 transition-colors px-4 py-2 rounded-full border border-zinc-300 hover:bg-zinc-100"
+                >
+                  <span className="font-euclidCircularB tracking-[-0.04em]">Explore KRX Scale</span>
+                  <ArrowRight size={14} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </section>
+
           {/* Blog Section */}
           <div className="py-12">
             <div className="text-center mb-8">
@@ -110,74 +159,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-4">
-              {/* KRX Labs Local Payments Article */}
-              <Link href="/blog/krx-labs-local-payments-global-settlement" className="block group">
-                <article className="h-full space-y-2 bg-zinc-900 p-4 border border-zinc-800 transition-all duration-300 hover:bg-zinc-800 relative overflow-hidden rounded-xl">
-                  <div className="h-32 mb-2 bg-emerald-600 bg-[url('https://flagcdn.com/w640/br.png')] bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" />
-                  
-                  <div className="flex items-center gap-2 text-xs">
-                    <span className="bg-emerald-100 text-emerald-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">FINTECH</span>
-                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-400">9 MIN</span>
-                  </div>
-                  
-                  <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
-                    <span className="text-zinc-200 relative inline-block group-hover:text-white transition-colors">
-                      KRX Labs: Bridging Global Ambition with Local Payment Realities
-                    </span>
-                  </h3>
-                </article>
-              </Link>
-              {/* Google Pixel Article */}
-              <Link href="/blog/google-pixel-zero-day-vulnerability" className="block group">
-                <article className="h-full space-y-2 bg-zinc-900 p-4 border border-zinc-800 transition-all duration-300 hover:bg-zinc-800 relative overflow-hidden rounded-xl">
-                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1598327105666-5b89351aff97')] bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" />
-                  
-                  <div className="flex items-center gap-2 text-xs">
-                    <span className="bg-red-100 text-red-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
-                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-400">8 MIN</span>
-                  </div>
-                  
-                  <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
-                    <span className="text-zinc-200 relative inline-block group-hover:text-white transition-colors">
-                      Google Pixel Zero-Day Vulnerability: What You Need to Know
-                    </span>
-                  </h3>
-                </article>
-              </Link>
-
-              {/* Git Vulnerability Article */}
-              <Link href="/blog/git-malicious-project-vulnerability" className="block group">
-                <article className="h-full space-y-2 bg-zinc-900 p-4 border border-zinc-800 transition-all duration-300 hover:bg-zinc-800 relative overflow-hidden rounded-xl">
-                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb')] bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" />
-                  
-                  <div className="flex items-center gap-2 text-xs">
-                    <span className="bg-red-100 text-red-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
-                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-400">10 MIN</span>
-                  </div>
-                  
-                  <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
-                    <span className="text-zinc-200 relative inline-block group-hover:text-white transition-colors">
-                      Git Malicious Project Vulnerability: How IDEs Executed Hackers' Code
-                    </span>
-                  </h3>
-                </article>
-              </Link>
-
-              {/* NDR Article */}
-              <Link href="/blog/ndr" className="block group">
-                <article className="h-full space-y-2 bg-zinc-900 p-4 border border-zinc-800 transition-all duration-300 hover:bg-zinc-800 relative overflow-hidden rounded-xl">
-                  <div className="h-32 mb-2 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31')] bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" />
-                  
-                  <div className="flex items-center gap-2 text-xs">
-                    <span className="bg-blue-100 text-blue-800 px-2 py-0.5 font-euclidCircularB tracking-[-0.04em] text-xs rounded-full">SECURITY</span>
-                    <span className="font-euclidCircularB tracking-[-0.04em] text-zinc-400">10 MIN</span>
-                  </div>
-                  
-                  <h3 className="text-sm font-satoshi tracking-[-0.03em] leading-tight">
-                    <span className="text-zinc-200 relative inline-block group-hover:text-white transition-colors">
-                      Why Your Enterprise Needs Network Detection and Response (NDR)
-                    </span>
+            {/* Minimal single article card */}
+            <div className="flex justify-center">
+              <Link href="/blog/krx-labs-local-payments-global-settlement" className="block group max-w-xl w-full">
+                <article className="bg-zinc-900 p-4 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="h-44 sm:h-56 mb-3 bg-emerald-600 bg-[url('https://flagcdn.com/w640/br.png')] bg-cover bg-center rounded-lg" />
+                  <h3 className="text-base sm:text-lg font-satoshi tracking-[-0.03em] leading-tight text-zinc-200 group-hover:text-white transition-colors">
+                    KRX Labs: Bridging Global Ambition with Local Payment Realities
                   </h3>
                 </article>
               </Link>

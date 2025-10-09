@@ -13,8 +13,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'KRX Lab | Software Infrastructure',
-  description: 'KRX Labs designs custom software infrastructures for companies operating in fast-growing markets — where every second matters and technology needs to respond with surgical precision and strategic intent.',
+  title: 'KRX Scale | Local payments, global precision',
+  description: 'KRX Scale enables global companies to accept Pix and local payment methods across emerging markets — without opening local entities or managing complex operations. Boost revenue, reduce overhead, and connect to global liquidity through one compliant and scalable infrastructure.',
   keywords: [
     'custom app development',
     'rapid app deployment',
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     'secure development',
     'tech consulting'
   ],
-  authors: [{ name: 'KRX Lab', url: 'https://krxlab.com' }],
-  creator: 'KRX Lab',
-  publisher: 'KRX Lab',
+  authors: [{ name: 'KRX Scale', url: 'https://krxscale.com' }],
+  creator: 'KRX Scale',
+  publisher: 'KRX Scale',
   formatDetection: {
     email: false,
     address: false,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'KRX Lab | Software Infrastructure',
+    title: 'KRX Labs | Local payments, global precision',
   },
   robots: {
     index: true,
@@ -81,10 +81,10 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'KRX Lab | Software Infrastructure & Security Solutions',
-    description: 'KRX Labs specializes in building secure, scalable software infrastructures for fast-growing companies. Expert solutions in cybersecurity, cloud architecture, and enterprise software.',
-    url: 'https://krxlab.com',
-    siteName: 'KRX Lab',
+    title: 'KRX Scale | Local payments, global precision',
+    description: 'Accept Pix and local payment methods across emerging markets without opening local entities. Connect to global liquidity through one compliant, scalable infrastructure.',
+    url: 'https://krxscale.com',
+    siteName: 'KRX Scale',
     images: [
       {
         url: '/og-image.svg',
@@ -98,8 +98,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KRX Lab | Software Infrastructure & Security Solutions',
-    description: 'KRX Labs specializes in building secure, scalable software infrastructures for fast-growing companies. Expert solutions in cybersecurity, cloud architecture, and enterprise software.',
+    title: 'KRX Scale | Local payments, global precision',
+    description: 'Accept Pix and local payment methods across emerging markets without opening local entities. Connect to global liquidity through one compliant, scalable infrastructure.',
     images: ['/og-image.svg'],
   },
   verification: {
@@ -109,10 +109,10 @@ export const metadata: Metadata = {
     'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
   category: 'technology',
-  applicationName: 'KRX Lab',
+  applicationName: 'KRX Scale',
   referrer: 'origin-when-cross-origin',
   assets: ['/careers'],
-  metadataBase: new URL('https://krxlab.com')
+  metadataBase: new URL('https://krxscale.com')
 };
 
 export const viewport: Viewport = {
