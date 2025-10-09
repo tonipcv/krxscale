@@ -3,7 +3,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ArrowRight, Globe } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Link from 'next/link'
 import ContactForm from './components/ContactForm'
 import { useLanguage } from './components/LanguageProvider'
@@ -11,12 +11,8 @@ import { useLanguage } from './components/LanguageProvider'
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false)
-  const { t, language, setLanguage } = useLanguage();
+  const { t } = useLanguage();
   // reading querystring via window in client only
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'pt' ? 'en' : 'pt');
-  };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -30,38 +26,23 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-zinc-800 overflow-hidden">
       {/* Navbar */}
-      <nav className="fixed w-full top-0 border-b border-zinc-200 backdrop-blur-md z-40 transition-all duration-300">
+      <nav className="fixed w-full top-0 backdrop-blur-md z-40 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            {/* Logo - Apenas o símbolo, sem o texto "KRX" */}
-            <div className="flex items-center group">
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 512 512"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="group-hover:scale-110 transition-transform duration-300"
-              >
-                <g stroke="#111111" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="128" y1="128" x2="256" y2="256" />
-                  <line x1="256" y1="256" x2="384" y2="128" />
-                  <line x1="256" y1="256" x2="128" y2="384" />
-                  <line x1="256" y1="256" x2="384" y2="384" />
-                  <line x1="256" y1="128" x2="256" y2="384" />
-                </g>
-              </svg>
-            </div>
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-3 group">
+              <img 
+                src="/logo.png" 
+                alt="KRX Labs Logo" 
+                width={48} 
+                height={48} 
+                className="group-hover:scale-110 transition-transform duration-300 invert"
+              />
+              <span className="text-xl tracking-[-0.03em] font-satoshi">KRX</span>
+            </Link>
 
             {/* Right Side Navigation */}
             <div className="flex items-center gap-4 sm:gap-6">
-              <button 
-                onClick={toggleLanguage}
-                className="flex items-center gap-1 text-xs tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
-              >
-                <Globe size={14} />
-                <span className="hidden sm:inline">{language === 'pt' ? 'PT' : 'EN'}</span>
-              </button>
               <Link
                 href="/blog"
                 className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
@@ -72,8 +53,8 @@ export default function Home() {
                 href="/careers"
                 className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
               >
-                <span className="hidden sm:inline">CAREERS</span>
-                <span className="sm:hidden text-xs">JOBS</span>
+                <span className="hidden sm:inline">Careers</span>
+                <span className="sm:hidden text-xs">Jobs</span>
               </Link>
             </div>
           </div>
