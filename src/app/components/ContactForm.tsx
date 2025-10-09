@@ -62,7 +62,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
     <div className="fixed inset-0 bg-black/90 flex items-start sm:items-center justify-center p-0 sm:p-4 z-50 backdrop-blur-sm animate-fadeIn overflow-y-auto">
       <Toaster position="top-center" />
       
-      <div className="bg-white w-full h-full sm:h-auto sm:max-w-xl sm:rounded-lg border-y sm:border border-zinc-200 relative animate-slideUp">
+      <div className="bg-[#f5efe7] w-full h-full sm:h-auto sm:max-w-xl sm:rounded-lg border-y sm:border border-zinc-200 relative animate-slideUp">
         <div className="flex items-center gap-3 p-4 border-b border-zinc-200">
           <svg
             width="20"
@@ -231,7 +231,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full group relative inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-zinc-800 hover:bg-zinc-900 border border-zinc-900 transition-all duration-300"
+              className="w-full group relative inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-zinc-800 hover:bg-zinc-900 border border-zinc-900 transition-all duration-300 rounded-full"
             >
               <span className="relative z-10 text-white/90">
                 {isSubmitting ? 'SENDING...' : 'SUBMIT'}
