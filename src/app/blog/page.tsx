@@ -58,7 +58,7 @@ export default function BlogPage() {
             <div className="flex justify-center">
               <Link href="/blog/krx-labs-local-payments-global-settlement" className="block group max-w-2xl w-full">
                 <article className="bg-zinc-900 p-5 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
-                  <div className="h-56 mb-3 bg-emerald-600 bg-[url('https://flagcdn.com/w1280/br.png')] bg-cover bg-center rounded-lg" />
+                  <div className="aspect-[6/13] w-full mb-3 bg-emerald-600 bg-[url('https://flagcdn.com/w1280/br.png')] bg-cover bg-center rounded-lg" />
                   <h3 className="text-lg sm:text-xl font-satoshi tracking-[-0.03em] leading-tight text-zinc-200 group-hover:text-white transition-colors">
                     KRX Labs: Bridging Global Ambition with Local Payment Realities
                   </h3>

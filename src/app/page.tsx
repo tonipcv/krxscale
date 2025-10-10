@@ -110,27 +110,27 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <article className="rounded-xl bg-white border border-zinc-200 p-5 sm:p-6">
-                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-800">Integrate</h3>
-                  <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] mt-1.5">
+                <article className="rounded-xl bg-zinc-900 border border-zinc-800 p-5 sm:p-6 hover:bg-zinc-800 transition-colors">
+                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-100">Integrate</h3>
+                  <p className="text-sm text-zinc-300 font-euclidCircularB tracking-[-0.04em] mt-1.5">
                     Connect once to KRX Scale with modern APIs and dashboards.
                   </p>
                 </article>
-                <article className="rounded-xl bg-white border border-zinc-200 p-5 sm:p-6">
-                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-800">Collect</h3>
-                  <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] mt-1.5">
+                <article className="rounded-xl bg-zinc-900 border border-zinc-800 p-5 sm:p-6 hover:bg-zinc-800 transition-colors">
+                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-100">Collect</h3>
+                  <p className="text-sm text-zinc-300 font-euclidCircularB tracking-[-0.04em] mt-1.5">
                     Accept Pix and local methods with instant confirmation.
                   </p>
                 </article>
-                <article className="rounded-xl bg-white border border-zinc-200 p-5 sm:p-6">
-                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-800">Settle</h3>
-                  <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] mt-1.5">
+                <article className="rounded-xl bg-zinc-900 border border-zinc-800 p-5 sm:p-6 hover:bg-zinc-800 transition-colors">
+                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-100">Settle</h3>
+                  <p className="text-sm text-zinc-300 font-euclidCircularB tracking-[-0.04em] mt-1.5">
                     Convert local currencies and settle in USD with compliance.
                   </p>
                 </article>
-                <article className="rounded-xl bg-white border border-zinc-200 p-5 sm:p-6">
-                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-800">Scale</h3>
-                  <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em] mt-1.5">
+                <article className="rounded-xl bg-zinc-900 border border-zinc-800 p-5 sm:p-6 hover:bg-zinc-800 transition-colors">
+                  <h3 className="text-lg font-satoshi tracking-[-0.03em] text-zinc-100">Scale</h3>
+                  <p className="text-sm text-zinc-300 font-euclidCircularB tracking-[-0.04em] mt-1.5">
                     Expand to new markets and optimize payouts programmatically.
                   </p>
                 </article>
@@ -148,39 +148,24 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Blog Section */}
-          <div className="py-12">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-satoshi tracking-[-0.03em] leading-tight text-zinc-800 mb-2">
-                Latest Articles
-              </h2>
-              <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em]">
-                Expert insights on cybersecurity and software infrastructure
-              </p>
-            </div>
-
-            {/* Minimal single article card */}
-            <div className="flex justify-center">
-              <Link href="/blog/krx-labs-local-payments-global-settlement" className="block group max-w-xl w-full">
-                <article className="bg-zinc-900 p-4 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
-                  <div className="h-44 sm:h-56 mb-3 bg-emerald-600 bg-[url('https://flagcdn.com/w640/br.png')] bg-cover bg-center rounded-lg" />
-                  <h3 className="text-base sm:text-lg font-satoshi tracking-[-0.03em] leading-tight text-zinc-200 group-hover:text-white transition-colors">
+          {/* Blog Section (ultra-minimal) */}
+          <section className="py-10">
+            <div className="max-w-3xl mx-auto">
+              <div className="h-px w-full bg-zinc-300/60" />
+              <div className="flex items-center justify-center gap-2 pt-5">
+                <span className="sr-only">From the blog:</span>
+                <Link
+                  href="/blog/krx-labs-local-payments-global-settlement"
+                  className="group inline-flex items-center gap-2 text-sm sm:text-base tracking-[-0.03em] text-zinc-700 hover:text-zinc-900 transition-colors"
+                >
+                  <span className="underline decoration-zinc-400/70 underline-offset-[6px] group-hover:decoration-zinc-700">
                     KRX Labs: Bridging Global Ambition with Local Payment Realities
-                  </h3>
-                </article>
-              </Link>
+                  </span>
+                  <ArrowRight size={14} strokeWidth={1.5} className="text-zinc-500 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+              </div>
             </div>
-
-            <div className="text-center mt-8">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-2 text-sm text-zinc-800 hover:text-zinc-600 transition-colors px-4 py-2 rounded-full border border-zinc-300 hover:bg-zinc-100"
-              >
-                <span className="font-euclidCircularB tracking-[-0.04em]">View all articles</span>
-                <ArrowRight size={14} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
+          </section>
 
           {/* Made by KRX */}
           <div className="pb-6 text-center">
