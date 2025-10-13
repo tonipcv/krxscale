@@ -7,6 +7,5 @@ Sitemap: https://krxlab.com/sitemap.xml
 
 # Specific paths
 Allow: /66
-Allow: /careers
 Disallow: /api/
 Disallow: /_next/ 

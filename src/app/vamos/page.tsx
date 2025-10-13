@@ -37,13 +37,6 @@ export default function Home() {
 
             {/* Right Side Navigation */}
             <div className="flex items-center gap-4 sm:gap-6">
-              <Link
-                href="/careers"
-                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-400 hover:text-white transition-colors"
-              >
-                <span className="hidden sm:inline">CAREERS</span>
-                <span className="sm:hidden text-xs">JOBS</span>
-              </Link>
             </div>
           </div>
         </div>

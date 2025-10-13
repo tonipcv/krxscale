@@ -12,34 +12,18 @@ export default function Success() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 512 512"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="group-hover:scale-110 transition-transform duration-300"
-              >
-                <g stroke="#111111" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="128" y1="128" x2="256" y2="256" />
-                  <line x1="256" y1="256" x2="384" y2="128" />
-                  <line x1="256" y1="256" x2="128" y2="384" />
-                  <line x1="256" y1="256" x2="384" y2="384" />
-                  <line x1="256" y1="128" x2="256" y2="384" />
-                </g>
-              </svg>
+              <img
+                src="/logo.png"
+                alt="KRX Labs Logo"
+                width={48}
+                height={48}
+                className="w-6 h-6 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform duration-300"
+              />
               <span className="text-xl tracking-[-0.03em] font-satoshi">KRX</span>
             </Link>
 
             {/* Right Side Navigation */}
             <div className="flex items-center gap-4 sm:gap-6">
-              <Link
-                href="/careers"
-                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
-              >
-                <span className="hidden sm:inline">CAREERS</span>
-                <span className="sm:hidden text-xs">JOBS</span>
-              </Link>
             </div>
           </div>
         </div>

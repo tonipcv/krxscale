@@ -37,12 +37,6 @@ export default function BlogPost() {
               >
                 Blog
               </Link>
-              <Link
-                href="/careers"
-                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
-              >
-                Careers
-              </Link>
             </div>
           </div>
         </div>

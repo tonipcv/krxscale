@@ -49,13 +49,6 @@ export default function Home() {
               >
                 Blog
               </Link>
-              <Link
-                href="/careers"
-                className="text-sm tracking-[-0.04em] font-euclidCircularB text-zinc-500 hover:text-zinc-800 transition-colors"
-              >
-                <span className="hidden sm:inline">Careers</span>
-                <span className="sm:hidden text-xs">Jobs</span>
-              </Link>
             </div>
           </div>
         </div>

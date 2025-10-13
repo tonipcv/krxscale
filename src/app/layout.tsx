@@ -111,7 +111,6 @@ export const metadata: Metadata = {
   category: 'technology',
   applicationName: 'KRX Scale',
   referrer: 'origin-when-cross-origin',
-  assets: ['/careers'],
   metadataBase: new URL('https://krxscale.com')
 };
 
