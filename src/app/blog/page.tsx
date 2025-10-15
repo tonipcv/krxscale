@@ -30,35 +30,26 @@ export default function BlogPage() {
               >
                 Blog
               </Link>
+              <span className="hidden sm:inline text-xs tracking-[-0.03em] text-zinc-400">Articles</span>
             </div>
           </div>
         </div>
       </nav>
 
       <div className="max-w-7xl mx-auto px-6 relative">
-        <main className="pt-32 pb-20">
-          {/* Blog Header */}
-          <div className="text-center space-y-4 mb-14">
-            <h1 className="text-4xl sm:text-5xl font-satoshi tracking-[-0.03em] leading-tight text-zinc-900">
-              KRX Labs Blog
-            </h1>
-            <p className="text-base sm:text-lg text-zinc-600 font-euclidCircularB tracking-[-0.03em] max-w-2xl mx-auto">
-              Local payments, global settlement, compliance by design.
-            </p>
-          </div>
+        <main className="pt-28 pb-20">
+          {/* Minimal header removed for a more professional, content-first layout */}
 
           {/* Articles Grid */}
           <section className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-7">
               {/* Post: Global Settlement */}
               <Link href="/blog/krx-labs-local-payments-global-settlement" className="group block">
-                <article className="h-full bg-zinc-900 p-5 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
-                  <div className="aspect-[16/9] w-full mb-3 bg-emerald-600 bg-[url('https://flagcdn.com/w1280/br.png')] bg-cover bg-center rounded-lg" />
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-euclidCircularB tracking-[-0.03em]">FINTECH</span>
+                <article className="h-full bg-zinc-900 p-6 md:p-7 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="flex items-center gap-0 mb-1">
                     <span className="text-[11px] text-zinc-400 font-euclidCircularB">9 min</span>
                   </div>
-                  <h3 className="text-base sm:text-lg font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
+                  <h3 className="text-lg sm:text-2xl font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
                     KRX Labs: Bridging Global Ambition with Local Payment Realities
                   </h3>
                 </article>
@@ -66,13 +57,11 @@ export default function BlogPage() {
 
               {/* Post: Accept Pix as a Foreign Company */}
               <Link href="/blog/how-to-accept-pix-as-a-foreign-company" className="group block">
-                <article className="h-full bg-zinc-900 p-5 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
-                  <div className="aspect-[16/9] w-full mb-3 bg-emerald-600 rounded-lg bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1556741533-f6acd647a785?auto=format&fit=crop&w=1200&q=70')"}} />
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-euclidCircularB tracking-[-0.03em]">FINTECH</span>
+                <article className="h-full bg-zinc-900 p-6 md:p-7 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="flex items-center gap-0 mb-1">
                     <span className="text-[11px] text-zinc-400 font-euclidCircularB">10 min</span>
                   </div>
-                  <h3 className="text-base sm:text-lg font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
+                  <h3 className="text-lg sm:text-2xl font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
                     How to Accept Pix as a Foreign Company (USD Settlement, No Local Entity)
                   </h3>
                 </article>
@@ -80,13 +69,11 @@ export default function BlogPage() {
 
               {/* Post: Sell in Brazil Without a Local Entity */}
               <Link href="/blog/how-to-sell-in-brazil-without-a-local-entity" className="group block">
-                <article className="h-full bg-zinc-900 p-5 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
-                  <div className="aspect-[16/9] w-full mb-3 bg-emerald-600 rounded-lg bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1556742393-d75f468bfcb0?auto=format&fit=crop&w=1200&q=70')"}} />
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-euclidCircularB tracking-[-0.03em]">FINTECH</span>
+                <article className="h-full bg-zinc-900 p-6 md:p-7 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="flex items-center gap-0 mb-1">
                     <span className="text-[11px] text-zinc-400 font-euclidCircularB">9 min</span>
                   </div>
-                  <h3 className="text-base sm:text-lg font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
+                  <h3 className="text-lg sm:text-2xl font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
                     How to Sell in Brazil Without a Local Entity (CNPJ)
                   </h3>
                 </article>
@@ -94,14 +81,60 @@ export default function BlogPage() {
 
               {/* Post: Pix, SPEI, PSE and M-Pesa */}
               <Link href="/blog/pix-spei-pse-mpesa-how-they-work" className="group block">
-                <article className="h-full bg-zinc-900 p-5 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
-                  <div className="aspect-[16/9] w-full mb-3 bg-emerald-600 rounded-lg bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=70')"}} />
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-euclidCircularB tracking-[-0.03em]">FINTECH</span>
+                <article className="h-full bg-zinc-900 p-6 md:p-7 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="flex items-center gap-0 mb-1">
                     <span className="text-[11px] text-zinc-400 font-euclidCircularB">11 min</span>
                   </div>
-                  <h3 className="text-base sm:text-lg font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
+                  <h3 className="text-lg sm:text-2xl font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
                     Pix, SPEI, PSE and M-Pesa: What They Are and How They Work
+                  </h3>
+                </article>
+              </Link>
+
+              {/* Post: What Is Local Payment Infrastructure (LPI) */}
+              <Link href="/blog/what-is-local-payment-infrastructure" className="group block">
+                <article className="h-full bg-zinc-900 p-6 md:p-7 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="flex items-center gap-0 mb-1">
+                    <span className="text-[11px] text-zinc-400 font-euclidCircularB">12 min</span>
+                  </div>
+                  <h3 className="text-lg sm:text-2xl font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
+                    What Is Local Payment Infrastructure (LPI)
+                  </h3>
+                </article>
+              </Link>
+
+              {/* Post: How Global Companies Expand into LATAM Payments */}
+              <Link href="/blog/how-global-companies-expand-into-latam-payments" className="group block">
+                <article className="h-full bg-zinc-900 p-6 md:p-7 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="flex items-center gap-0 mb-1">
+                    <span className="text-[11px] text-zinc-400 font-euclidCircularB">12 min</span>
+                  </div>
+                  <h3 className="text-lg sm:text-2xl font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
+                    How Global Companies Expand into LATAM Payments
+                  </h3>
+                </article>
+              </Link>
+
+              {/* Post: Cross Border Settlement and FX Compliance in Emerging Markets */}
+              <Link href="/blog/cross-border-settlement-fx-compliance-emerging-markets" className="group block">
+                <article className="h-full bg-zinc-900 p-6 md:p-7 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="flex items-center gap-0 mb-1">
+                    <span className="text-[11px] text-zinc-400 font-euclidCircularB">12 min</span>
+                  </div>
+                  <h3 className="text-lg sm:text-2xl font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
+                    Cross Border Settlement and FX Compliance in Emerging Markets
+                  </h3>
+                </article>
+              </Link>
+
+              {/* Post: Why Stripe and dLocal Do Not Fully Solve Local Payments */}
+              <Link href="/blog/why-stripe-dlocal-dont-fully-solve-local-payments" className="group block">
+                <article className="h-full bg-zinc-900 p-6 md:p-7 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
+                  <div className="flex items-center gap-0 mb-1">
+                    <span className="text-[11px] text-zinc-400 font-euclidCircularB">10 min</span>
+                  </div>
+                  <h3 className="text-lg sm:text-2xl font-satoshi tracking-[-0.02em] leading-snug text-zinc-200 group-hover:text-white transition-colors">
+                    Why Stripe and dLocal Do Not Fully Solve Local Payments
                   </h3>
                 </article>
               </Link>

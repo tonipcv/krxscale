@@ -62,17 +62,7 @@ export default function LocalRailsExplainerPage() {
               </p>
             </header>
 
-            {/* Hero Cover */}
-            <div className="relative overflow-hidden rounded-sm mb-12">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 z-10" />
-              <div
-                className="h-[280px] sm:h-[380px] bg-emerald-600 bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80')",
-                }}
-              />
-            </div>
+            {/* Removed hero cover for minimal text-only layout */}
 
             {/* Lead paragraph */}
             <p className="text-zinc-700 leading-[1.95] text-[20px] mb-12">
