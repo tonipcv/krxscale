@@ -75,9 +75,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://krxlab.com',
+    canonical: 'https://krxscale.com',
     languages: {
-      'en-US': 'https://krxlab.com'
+      'en-US': 'https://krxscale.com'
     }
   },
   openGraph: {
@@ -141,6 +141,31 @@ export default function RootLayout({
           `}
         </Script>
         {/* End Google Tag Manager */}
+        {/* JSON-LD: WebSite & SiteNavigationElement for sitelinks */}
+        <Script id="ld-json-website" type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'KRX Scale',
+            url: 'https://krxscale.com',
+          })}
+        </Script>
+        <Script id="ld-json-sitenav" type="application/ld+json">
+          {JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'SiteNavigationElement',
+              name: 'Grow without local operations',
+              url: 'https://krxscale.com/scale',
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'SiteNavigationElement',
+              name: 'Talk to the team',
+              url: 'https://krxscale.com/?contact=open',
+            },
+          ])}
+        </Script>
       </head>
       <body className={`${spaceGrotesk.className} antialiased`}>
         {/* Google Tag Manager (noscript) */}

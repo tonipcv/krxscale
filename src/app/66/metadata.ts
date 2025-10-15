@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'KRXProtect™ | Enterprise Security Solutions',
     description: 'Advanced security solutions for modern enterprises. KRXProtect offers AI-powered defense systems including endpoint protection, mobile security, email security, cloud protection, and compliance automation.',
-    url: 'https://krxlab.com/66',
+    url: 'https://krxscale.com/66',
     siteName: 'KRX Lab',
     images: [
       {
-        url: 'https://krxlab.com/logo.ico',
+        url: 'https://krxscale.com/logo.ico',
         width: 1200,
         height: 630,
       },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'KRXProtect™ | Enterprise Security Solutions',
     description: 'Advanced security solutions for modern enterprises. KRXProtect offers AI-powered defense systems including endpoint protection, mobile security, email security, cloud protection, and compliance automation.',
-    images: ['https://krxlab.com/logo.ico'],
+    images: ['https://krxscale.com/logo.ico'],
   },
   robots: {
     index: true,
@@ -51,6 +51,6 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://krxlab.com/66'
+    canonical: 'https://krxscale.com/66'
   }
 } 

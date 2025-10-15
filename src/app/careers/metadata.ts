@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Security Careers at KRX Lab | Join Our Team',
     description: 'Join KRX Lab\'s security team. We\'re hiring Security Engineers, Mobile Security Developers, Cloud Security Architects, and Compliance Specialists. Remote positions available.',
-    url: 'https://krxlab.com/careers',
+    url: 'https://krxscale.com/careers',
     siteName: 'KRX Lab',
     images: [
       {
-        url: 'https://krxlab.com/logo.ico',
+        url: 'https://krxscale.com/logo.ico',
         width: 1200,
         height: 630,
       },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Security Careers at KRX Lab | Join Our Team',
     description: 'Join KRX Lab\'s security team. We\'re hiring Security Engineers, Mobile Security Developers, Cloud Security Architects, and Compliance Specialists. Remote positions available.',
-    images: ['https://krxlab.com/logo.ico'],
+    images: ['https://krxscale.com/logo.ico'],
   },
   robots: {
     index: true,
@@ -49,6 +49,6 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://krxlab.com/careers'
+    canonical: 'https://krxscale.com/careers'
   }
 } 

@@ -33,7 +33,7 @@ export async function POST(request: Request) {
           utm_source: 'website',
           utm_medium: 'organic',
           utm_campaign: 'newsletter_signup',
-          referring_site: 'krxlab.com',
+          referring_site: 'krxscale.com',
           double_opt_override: 'true', // Bypass do duplo opt-in
         }),
       }

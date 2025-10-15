@@ -3,9 +3,9 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://krxlab.com/sitemap.xml
+Sitemap: https://krxscale.com/sitemap.xml
 
 # Specific paths
 Allow: /66
 Disallow: /api/
-Disallow: /_next/ 
+Disallow: /_next/

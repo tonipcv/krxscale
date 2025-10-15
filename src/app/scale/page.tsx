@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ['/og-image.svg'],
   },
   robots: { index: true, follow: true },
-  authors: [{ name: 'KRX Labs', url: 'https://krxlab.com' }],
+  authors: [{ name: 'KRX Labs', url: 'https://krxscale.com' }],
 }
 
 export default function KRXScalePage() {
@@ -63,7 +63,7 @@ export default function KRXScalePage() {
           provider: {
             '@type': 'Organization',
             name: 'KRX Labs',
-            url: 'https://krxlab.com',
+            url: 'https://krxscale.com',
             logo: '/logo.png',
           },
           areaServed: ['Brazil', 'Mexico', 'India', 'Global'],
@@ -72,12 +72,12 @@ export default function KRXScalePage() {
             price: '0',
             priceCurrency: 'USD',
             availability: 'https://schema.org/InStock',
-            url: 'https://krxlab.com/scale',
+            url: 'https://krxscale.com/scale',
             description: 'Contact sales for pricing. Transparent per-transaction pricing + optional FX.',
           },
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://krxlab.com/scale',
+            '@id': 'https://krxscale.com/scale',
           },
         })}
       </Script>

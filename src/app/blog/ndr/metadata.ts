@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Why Your Enterprise Needs Network Detection and Response | KRX',
     description: 'Learn how Network Detection and Response detects advanced attacks and stops intruders hiding in your network. Comprehensive guide to NDR security.',
-    url: 'https://krxlab.com/blog/ndr',
+    url: 'https://krxscale.com/blog/ndr',
     siteName: 'KRX Lab',
     images: [
       {
-        url: 'https://krxlab.com/logo.ico',
+        url: 'https://krxscale.com/logo.ico',
         width: 1200,
         height: 630,
       },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Why Your Enterprise Needs Network Detection and Response | KRX',
     description: 'Learn how Network Detection and Response detects advanced attacks and stops intruders hiding in your network. Comprehensive guide to NDR security.',
-    images: ['https://krxlab.com/logo.ico'],
+    images: ['https://krxscale.com/logo.ico'],
   },
   robots: {
     index: true,
@@ -55,6 +55,6 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://krxlab.com/blog/ndr'
+    canonical: 'https://krxscale.com/blog/ndr'
   }
-} 
+}
