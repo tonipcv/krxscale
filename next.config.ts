@@ -5,6 +5,21 @@ const nextConfig: NextConfig = {
   compress: true,
   reactStrictMode: true,
   swcMinify: true,
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.krxscale.com",
+          },
+        ],
+        destination: "https://krxscale.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     domains: ['krxscale.com', 'koraxlabs.com'],
     formats: ['image/avif', 'image/webp'],
@@ -47,3 +62,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+

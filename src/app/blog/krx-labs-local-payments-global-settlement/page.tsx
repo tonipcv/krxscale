@@ -3,7 +3,7 @@ import Script from 'next/script'
 import type { Metadata } from 'next'
 import { ArrowLeft, Globe, Banknote, Shield, Lock, BarChart3 } from 'lucide-react'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://krxscale.com'
 const articlePath = '/blog/krx-labs-local-payments-global-settlement'
 const articleUrl = `${siteUrl}${articlePath}`
 const ogImage = 'https://flagcdn.com/w1200/br.png'

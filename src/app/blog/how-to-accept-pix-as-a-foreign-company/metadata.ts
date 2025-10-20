@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://krxscale.com'
 const articlePath = '/blog/how-to-accept-pix-as-a-foreign-company'
 const articleUrl = `${siteUrl}${articlePath}`
 const ogImage = `${siteUrl}/og-image.svg`
