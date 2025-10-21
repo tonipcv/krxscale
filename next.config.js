@@ -8,21 +8,6 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.krxscale.com',
-          },
-        ],
-        destination: 'https://krxscale.com/:path*',
-        permanent: true,
-      },
-    ]
-  },
   async rewrites() {
     if (isProd) {
       return []
