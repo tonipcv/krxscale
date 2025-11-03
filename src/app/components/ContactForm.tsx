@@ -4,7 +4,7 @@
 import { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
-import { X, Send, User, Mail, Phone, Building, Users, DollarSign, FileText, ChevronDown } from 'lucide-react'
+import { X, Send, User, Building, Briefcase, DollarSign, Globe, Flag, MapPin, Target, ChevronDown } from 'lucide-react'
 
 interface ContactFormProps {
   onClose: () => void
@@ -15,31 +15,33 @@ export default function ContactForm({ onClose }: ContactFormProps) {
   const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    phone: '',
-    sector: '',
-    employees: '',
+    company: '',
+    role: '',
     arr: '',
-    needs: ''
+    markets: '',
+    isUS: 'yes',
+    country: '',
+    intent: ''
   })
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const formData = new FormData(e.currentTarget)
+    const form = new FormData(e.currentTarget)
     const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
-      sector: formData.get('sector'),
-      employees: formData.get('employees'),
-      arr: formData.get('arr'),
-      needs: formData.get('needs')
+      name: form.get('name'),
+      company: form.get('company'),
+      role: form.get('role'),
+      arr: form.get('arr'),
+      markets: form.get('markets'),
+      isUS: form.get('isUS') === 'yes',
+      country: form.get('isUS') === 'no' ? (form.get('country') as string) : null,
+      intent: form.get('intent')
     }
 
     try {
-      const response = await fetch('/api/leads', {
+      const response = await fetch('/api/signups', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,32 +61,23 @@ export default function ContactForm({ onClose }: ContactFormProps) {
   }
 
   return (
-    <div className="fixed inset-0 bg-black/90 flex items-start sm:items-center justify-center p-0 sm:p-4 z-50 backdrop-blur-sm animate-fadeIn overflow-y-auto">
+    <div className="fixed inset-0 bg-[#f5efe7] flex items-start sm:items-center justify-center p-0 sm:p-4 z-50 backdrop-blur-sm animate-fadeIn overflow-y-auto">
       <Toaster position="top-center" />
       
-      <div className="bg-zinc-900 w-full h-full sm:h-auto sm:max-w-xl sm:rounded-lg border-y sm:border border-zinc-800 relative animate-slideUp">
-        <div className="flex items-center gap-3 p-4 border-b border-zinc-800">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 512 512"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g stroke="#ffffff" strokeWidth="32" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="128" y1="128" x2="256" y2="256" />
-              <line x1="256" y1="256" x2="384" y2="128" />
-              <line x1="256" y1="256" x2="128" y2="384" />
-              <line x1="256" y1="256" x2="384" y2="384" />
-              <line x1="256" y1="128" x2="256" y2="384" />
-            </g>
-          </svg>
-          <span className="text-sm tracking-[-0.03em] font-satoshi text-zinc-100">Precision-built technology</span>
+      <div className="bg-[#f5efe7] w-full h-full sm:h-auto sm:max-w-xl sm:rounded-lg border-y sm:border border-zinc-300 relative animate-slideUp">
+        <div className="flex items-center gap-3 p-4 border-b border-zinc-300">
+          <img
+            src="/logo.png"
+            alt="KRX Labs Logo"
+            width={20}
+            height={20}
+            className="w-5 h-5 invert"
+          />
         </div>
 
         <button 
           onClick={onClose}
-          className="absolute right-4 top-4 text-zinc-400 hover:text-zinc-200 transition-colors"
+          className="absolute right-4 top-4 text-zinc-500 hover:text-zinc-700 transition-colors"
         >
           <X size={20} className="stroke-[1.5]" />
         </button>
@@ -92,7 +85,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
         <div className="p-4 sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+              <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
                 <User size={14} className="text-zinc-400" />
                 Name
               </label>
@@ -102,94 +95,45 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
-                className="w-full bg-zinc-800 border border-zinc-700 p-2.5 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
+                placeholder="Your full name"
+                className="w-full bg-white border border-zinc-300 p-2.5 text-sm text-zinc-800 placeholder:text-zinc-400 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
               />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <Mail size={14} className="text-zinc-400" />
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="w-full bg-zinc-800 border border-zinc-700 p-2.5 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
-              />
-            </div>
-
-            <div className="space-y-1.5">
-              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <Phone size={14} className="text-zinc-400" />
-                Phone
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                required
-                className="w-full bg-zinc-800 border border-zinc-700 p-2.5 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
-              />
-            </div>
-
-            <div className="space-y-1.5">
-              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+              <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
                 <Building size={14} className="text-zinc-400" />
-                Industry
+                Company
               </label>
-              <div className="relative">
-                <select
-                  name="sector"
-                  value={formData.sector}
-                  onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
-                  required
-                  className="w-full bg-zinc-800 border border-zinc-700 p-2.5 pr-8 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
-                >
-                  <option value="">Select</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Healthcare">Healthcare</option>
-                  <option value="Education">Education</option>
-                  <option value="Finance">Finance</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Manufacturing">Manufacturing</option>
-                  <option value="Services">Services</option>
-                  <option value="Other">Other</option>
-                </select>
-                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" />
-              </div>
+              <input
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                required
+                placeholder="Company name"
+                className="w-full bg-white border border-zinc-300 p-2.5 text-sm text-zinc-800 placeholder:text-zinc-400 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
+              />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <Users size={14} className="text-zinc-400" />
-                Number of employees
+              <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Briefcase size={14} className="text-zinc-400" />
+                Role
               </label>
-              <div className="relative">
-                <select
-                  name="employees"
-                  value={formData.employees}
-                  onChange={(e) => setFormData({ ...formData, employees: e.target.value })}
-                  required
-                  className="w-full bg-zinc-800 border border-zinc-700 p-2.5 pr-8 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
-                >
-                  <option value="">Select</option>
-                  <option value="1-10">1-10 employees</option>
-                  <option value="11-50">11-50 employees</option>
-                  <option value="51-200">51-200 employees</option>
-                  <option value="201-500">201-500 employees</option>
-                  <option value="501-1000">501-1000 employees</option>
-                  <option value="1001+">More than 1000 employees</option>
-                </select>
-                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" />
-              </div>
+              <input
+                type="text"
+                name="role"
+                value={formData.role}
+                onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                required
+                placeholder="Your role (e.g. CTO)"
+                className="w-full bg-white border border-zinc-300 p-2.5 text-sm text-zinc-800 placeholder:text-zinc-400 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
+              />
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+              <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
                 <DollarSign size={14} className="text-zinc-400" />
                 Annual Revenue
               </label>
@@ -199,33 +143,101 @@ export default function ContactForm({ onClose }: ContactFormProps) {
                   value={formData.arr}
                   onChange={(e) => setFormData({ ...formData, arr: e.target.value })}
                   required
-                  className="w-full bg-zinc-800 border border-zinc-700 p-2.5 pr-8 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
+                  className="w-full bg-white border border-zinc-300 p-2.5 pr-8 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
                 >
-                  <option value="">Select</option>
+                  <option value="" disabled hidden>Select...</option>
                   <option value="Less than $100k">Less than $100k</option>
                   <option value="$100k-$500k">$100k-$500k</option>
                   <option value="$500k-$1M">$500k-$1M</option>
                   <option value="$1M-$5M">$1M-$5M</option>
                   <option value="$5M-$10M">$5M-$10M</option>
                   <option value="$10M-$50M">$10M-$50M</option>
-                  <option value="More than $50M">More than $50M</option>
+                  <option value=">$50M">More than $50M</option>
                 </select>
                 <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none" />
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-sm text-zinc-400 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
-                <FileText size={14} className="text-zinc-400" />
-                What are your needs?
+              <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Globe size={14} className="text-zinc-400" />
+                Markets you sell in
               </label>
-              <textarea
-                name="needs"
-                value={formData.needs}
-                onChange={(e) => setFormData({ ...formData, needs: e.target.value })}
-                className="w-full bg-zinc-800 border border-zinc-700 p-2.5 text-sm text-zinc-100 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 h-24 resize-none"
-                required
-              />
+              <div className="relative">
+                <select
+                  name="markets"
+                  value={formData.markets}
+                  onChange={(e) => setFormData({ ...formData, markets: e.target.value })}
+                  required
+                  className="w-full bg-white border border-zinc-300 p-2.5 pr-8 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
+                >
+                  <option value="" disabled hidden>Select...</option>
+                  <option value="asia">Asia</option>
+                  <option value="latam">LATAM</option>
+                  <option value="africa">Africa</option>
+                  <option value="all">All of the above</option>
+                </select>
+                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" />
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Flag size={14} className="text-zinc-400" />
+                Is it a US company?
+              </label>
+              <div className="relative">
+                <select
+                  name="isUS"
+                  value={formData.isUS}
+                  onChange={(e) => setFormData({ ...formData, isUS: e.target.value })}
+                  required
+                  className="w-full bg-white border border-zinc-300 p-2.5 pr-8 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
+                >
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" />
+              </div>
+            </div>
+
+            {formData.isUS === 'no' && (
+              <div className="space-y-1.5">
+                <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                  <MapPin size={14} className="text-zinc-400" />
+                  If not, which country?
+                </label>
+                <input
+                  type="text"
+                  name="country"
+                  value={formData.country}
+                  onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                  required={formData.isUS === 'no'}
+                  placeholder="Country"
+                  className="w-full bg-white border border-zinc-300 p-2.5 text-sm text-zinc-800 placeholder:text-zinc-400 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500"
+                />
+              </div>
+            )}
+
+            <div className="space-y-1.5">
+              <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
+                <Target size={14} className="text-zinc-400" />
+                What do you want?
+              </label>
+              <div className="relative">
+                <select
+                  name="intent"
+                  value={formData.intent}
+                  onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
+                  required
+                  className="w-full bg-white border border-zinc-300 p-2.5 pr-8 text-sm text-zinc-800 font-euclidCircularB tracking-[-0.04em] focus:outline-none focus:border-zinc-500 appearance-none"
+                >
+                  <option value="" disabled hidden>Select...</option>
+                  <option value="sell_local_methods">Sell and accept local methods and increase conversion in days</option>
+                  <option value="improve_local_rates">Improve local operation rates I already do today</option>
+                </select>
+                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" />
+              </div>
             </div>
 
             <button

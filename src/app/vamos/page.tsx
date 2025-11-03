@@ -63,7 +63,7 @@ export default function Home() {
                   onClick={() => setShowForm(true)}
                   className="group relative inline-flex items-center gap-3 px-8 py-4 text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300"
                 >
-                  <span className="relative z-10 text-white/90">APPLY NOW!</span>
+                  <span className="relative z-10 text-white/90">Create a Free Account</span>
                   <ArrowRight size={16} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

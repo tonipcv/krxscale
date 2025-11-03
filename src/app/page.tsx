@@ -75,10 +75,10 @@ export default function Home() {
               <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
                 <button
                   onClick={() => setShowForm(true)}
-                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden bg-zinc-800 hover:bg-zinc-900 border border-zinc-900 transition-all duration-300 rounded-full"
+                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-euclidCircularB tracking-[-0.04em] overflow-hidden rounded-full text-white transition-all duration-300 border border-transparent bg-gradient-to-r from-zinc-800 to-zinc-900 hover:from-zinc-900 hover:to-black"
                 >
-                  <span className="relative z-10 text-white/90">{t('home.applyNow')}</span>
-                  <ArrowRight size={14} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:translate-x-1 transition-transform" />
+                  <span className="relative z-10">{t('home.applyNow')}</span>
+                  <ArrowRight size={14} strokeWidth={1.5} className="relative z-10 text-white group-hover:translate-x-1 transition-transform" />
                 </button>
                 
                 <Link

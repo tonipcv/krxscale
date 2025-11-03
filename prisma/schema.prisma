@@ -29,4 +29,17 @@ model Partner {
   notes       String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-} 
+}
+
+model Signup {
+  id        Int      @id @default(autoincrement())
+  name      String
+  company   String
+  role      String
+  arr       String
+  markets   String
+  isUS      Boolean
+  country   String?
+  intent    String
+  createdAt DateTime @default(now())
+}
