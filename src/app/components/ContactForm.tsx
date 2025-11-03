@@ -13,6 +13,7 @@ interface ContactFormProps {
 export default function ContactForm({ onClose }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
+  const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -50,7 +51,8 @@ export default function ContactForm({ onClose }: ContactFormProps) {
       })
 
       if (response.ok) {
-        router.push('/success')
+        setSubmitted(true)
+        setIsSubmitting(false)
       } else {
         throw new Error('Error sending form')
       }
@@ -65,13 +67,13 @@ export default function ContactForm({ onClose }: ContactFormProps) {
       <Toaster position="top-center" />
       
       <div className="bg-[#f5efe7] w-full h-full sm:h-auto sm:max-w-xl sm:rounded-lg border-y sm:border border-zinc-300 relative animate-slideUp">
-        <div className="flex items-center gap-3 p-4 border-b border-zinc-300">
+        <div className="flex items-center gap-3 p-4 border-b border-zinc-300 group">
           <img
             src="/logo.png"
             alt="KRX Labs Logo"
-            width={20}
-            height={20}
-            className="w-5 h-5 invert"
+            width={32}
+            height={32}
+            className="w-5 h-5 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform duration-300 invert"
           />
         </div>
 
@@ -83,6 +85,23 @@ export default function ContactForm({ onClose }: ContactFormProps) {
         </button>
         
         <div className="p-4 sm:p-8">
+          {submitted ? (
+            <div className="space-y-4 text-center">
+              <div className="mx-auto w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-6 h-6 text-emerald-600">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-satoshi text-zinc-800 tracking-[-0.03em]">Request received</h3>
+              <p className="text-sm text-zinc-600 font-euclidCircularB tracking-[-0.04em]">Well reach out shortly. You can close this window.</p>
+              <button
+                onClick={onClose}
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm rounded-full bg-zinc-900 text-white hover:bg-black transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-1.5">
               <label className="text-sm text-zinc-700 font-euclidCircularB tracking-[-0.04em] flex items-center gap-2">
@@ -251,6 +270,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
               <Send size={14} strokeWidth={1.5} className="relative z-10 text-white/70 group-hover:translate-x-1 transition-transform" />
             </button>
           </form>
+          )}
         </div>
       </div>
 
